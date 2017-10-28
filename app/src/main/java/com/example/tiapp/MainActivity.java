@@ -6,19 +6,21 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 public class MainActivity extends AppCompatActivity {
-    // TODO: change status bar color
 
-    private boolean firstView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
 
         SharedPreferences settings = getSharedPreferences("prefs", 0);
-        boolean firstRun = settings.getBoolean("firstRun", true);
-        if ( firstRun ) {
+        if ( settings.getBoolean("firstRun", true)) {
             startActivity(new Intent(MainActivity.this, WelcomeViewFlipper.class));
         }
+        if ( settings.getBoolean("newUser", true)) {
+            startActivity(new Intent(MainActivity.this, LoginActivity.class));
+        }
 
+        setContentView(R.layout.activity_main);
+        Utils.darkenStatusBar(this, R.color.violet);
     }
+
 }
