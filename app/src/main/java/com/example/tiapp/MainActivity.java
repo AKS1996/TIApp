@@ -17,9 +17,7 @@ public class MainActivity extends AppCompatActivity {
         SharedPreferences settings = getSharedPreferences("prefs", 0);
         boolean firstRun = settings.getBoolean("firstRun", true);
         if ( firstRun ) {
-            startActivityForResult(
-                    new Intent(MainActivity.this, WelcomeViewFlipper.class),R.integer.WELCOME_CODE);
-
+            startActivity(new Intent(MainActivity.this, WelcomeViewFlipper.class));
         }
 
     }
