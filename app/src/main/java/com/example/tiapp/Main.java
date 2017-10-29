@@ -42,14 +42,7 @@ public class Main extends AppCompatActivity
             }
         });
 
-//        startActivityForResult(new Intent(this, DotClass.class),1);
-////        SharedPreferences settings = getSharedPreferences("prefs", 0);
-////        if ( settings.getBoolean("newUser", true)) {
-////            startActivity(new Intent(Main.this, LoginActivity.class));
-////        }
-////        if ( settings.getBoolean("firstRun", true)) {
-////            startActivity(new Intent(Main.this, WelcomeViewFlipper.class));
-////        }
+
     }
 
     @Override
