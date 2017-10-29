@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.support.v7.widget.Toolbar;
 
 import com.github.fcannizzaro.materialstepper.AbstractStep;
 
@@ -12,6 +13,7 @@ public class StepSample extends AbstractStep {
     private int i = 1;
     private String[] titles = new String[3];
 
+    // TODO Get JSON data drom API's
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         titles[0] = "1. SET UP YOUR LOCATION";
@@ -22,11 +24,11 @@ public class StepSample extends AbstractStep {
         View v;
         if (getArguments().getInt("position", 0) == 1) {
             v = inflater.inflate(R.layout.pre_story1, container, false);
-            getActivity().setTitle(titles[0]);
+            ((Toolbar) v.findViewById(R.id.toolbarPreStory1)).setTitle(titles[0]);
 
         } else {
             v = inflater.inflate(R.layout.pre_story2, container, false);
-            getActivity().setTitle(titles[1]);
+            ((Toolbar) v.findViewById(R.id.toolbarPreStory2)).setTitle(titles[1]);
         }
         return v;
     }
