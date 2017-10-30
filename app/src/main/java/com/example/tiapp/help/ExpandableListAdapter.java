@@ -103,4 +103,9 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
     public boolean isChildSelectable(int groupPosition, int childPosition) {
         return true;
     }
+
+//    public int GetDipsFromPixel(float pixels){
+//        final float scale = getResources().getDisplayMetrics().density;
+//        return (int) (pixels * scale + 0.5f);
+//    }
 }

@@ -21,6 +21,12 @@ import android.view.ViewGroup;
 import android.widget.ExpandableListView;
 import com.example.tiapp.R;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -125,50 +131,49 @@ public class Help extends AppCompatActivity implements NavigationView.OnNavigati
             View rootView = inflater.inflate(R.layout.fragment_help, container, false);
 
             expListView = (ExpandableListView) rootView.findViewById(R.id.expandListHelp);
-            prepareListData();
+            prepareListData(getArguments().getInt(ARG_SECTION_NUMBER));
             listAdapter = new ExpandableListAdapter(getContext(), listDataHeader, listDataChild);
             expListView.setAdapter(listAdapter);
 
             return rootView;
         }
 
-        private void prepareListData() {
-            listDataHeader = new ArrayList<String>();
-            listDataChild = new HashMap<String, List<String>>();
+        public String loadJSONFromAsset() {
+            String json;
+            try {
+                InputStream is = getActivity().getAssets().open("help.json");
+                int size = is.available();
+                byte[] buffer = new byte[size];
+                is.read(buffer);
+                is.close();
+                json = new String(buffer, "UTF-8");
+            } catch (IOException ex) {
+                ex.printStackTrace();
+                return null;
+            }
+            return json;
+        }
 
-            // Adding child data
-            listDataHeader.add("Top 250");
-            listDataHeader.add("Now Showing");
-            listDataHeader.add("Coming Soon..");
+        private void prepareListData(int section) {
+            listDataHeader = new ArrayList<>();
+            listDataChild = new HashMap<>();
+            List<String> temp;
 
-            // Adding child data
-            List<String> top250 = new ArrayList<String>();
-            top250.add("The Shawshank Redemption");
-            top250.add("The Godfather");
-            top250.add("The Godfather: Part II");
-            top250.add("Pulp Fiction");
-            top250.add("The Good, the Bad and the Ugly");
-            top250.add("The Dark Knight");
-            top250.add("12 Angry Men");
+            try {
+                JSONObject obj = new JSONObject(loadJSONFromAsset());
+                JSONArray selectedArray = obj.getJSONArray(section+"");
 
-            List<String> nowShowing = new ArrayList<String>();
-            nowShowing.add("The Conjuring");
-            nowShowing.add("Despicable Me 2");
-            nowShowing.add("Turbo");
-            nowShowing.add("Grown Ups 2");
-            nowShowing.add("Red 2");
-            nowShowing.add("The Wolverine");
+                for (int i = 0; i < selectedArray.length(); i++) {
+                    JSONObject j = selectedArray.getJSONObject(i);
 
-            List<String> comingSoon = new ArrayList<String>();
-            comingSoon.add("2 Guns");
-            comingSoon.add("The Smurfs 2");
-            comingSoon.add("The Spectacular Now");
-            comingSoon.add("The Canyons");
-            comingSoon.add("Europa Report");
-
-            listDataChild.put(listDataHeader.get(0), top250); // Header, Child data
-            listDataChild.put(listDataHeader.get(1), nowShowing);
-            listDataChild.put(listDataHeader.get(2), comingSoon);
+                    temp = new ArrayList<>();
+                    temp.add(j.getString("content"));
+                    listDataHeader.add(j.getString("topic"));
+                    listDataChild.put(j.getString("topic"),temp);
+                }
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
         }
     }
 
