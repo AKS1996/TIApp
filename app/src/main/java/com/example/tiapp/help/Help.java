@@ -1,4 +1,4 @@
-package com.example.tiapp;
+package com.example.tiapp.help;
 
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.TabLayout;
@@ -18,24 +18,14 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
-import android.widget.TextView;
+import android.widget.ExpandableListView;
+import com.example.tiapp.R;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 
 public class Help extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener  {
-
-    /**
-     * The {@link android.support.v4.view.PagerAdapter} that will provide
-     * fragments for each of the sections. We use a
-     * {@link FragmentPagerAdapter} derivative, which will keep every
-     * loaded fragment in memory. If this becomes too memory intensive, it
-     * may be best to switch to a
-     * {@link android.support.v4.app.FragmentStatePagerAdapter}.
-     */
-    private SectionsPagerAdapter mSectionsPagerAdapter;
-
-    /**
-     * The {@link ViewPager} that will host the section contents.
-     */
-    private ViewPager mViewPager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,11 +34,12 @@ public class Help extends AppCompatActivity implements NavigationView.OnNavigati
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        toolbar.setTitle("FAQ");
 
 
         // Tab part starts
-        mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
-        mViewPager = (ViewPager) findViewById(R.id.container);
+        SectionsPagerAdapter mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
+        ViewPager mViewPager = (ViewPager) findViewById(R.id.container);
         mViewPager.setAdapter(mSectionsPagerAdapter);
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
         mViewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
@@ -107,20 +98,19 @@ public class Help extends AppCompatActivity implements NavigationView.OnNavigati
         return true;
     }
 
+
+
     public static class PlaceholderFragment extends Fragment {
-        /**
-         * The fragment argument representing the section number for this
-         * fragment.
-         */
         private static final String ARG_SECTION_NUMBER = "section_number";
+
+        ExpandableListAdapter listAdapter;
+        ExpandableListView expListView;
+        List<String> listDataHeader;
+        HashMap<String, List<String>> listDataChild;
 
         public PlaceholderFragment() {
         }
 
-        /**
-         * Returns a new instance of this fragment for the given section
-         * number.
-         */
         public static PlaceholderFragment newInstance(int sectionNumber) {
             PlaceholderFragment fragment = new PlaceholderFragment();
             Bundle args = new Bundle();
@@ -133,16 +123,57 @@ public class Help extends AppCompatActivity implements NavigationView.OnNavigati
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
             View rootView = inflater.inflate(R.layout.fragment_help, container, false);
-            TextView textView = (TextView) rootView.findViewById(R.id.section_label);
-            textView.setText(getString(R.string.section_format, getArguments().getInt(ARG_SECTION_NUMBER)));
+
+            expListView = (ExpandableListView) rootView.findViewById(R.id.expandListHelp);
+            prepareListData();
+            listAdapter = new ExpandableListAdapter(getContext(), listDataHeader, listDataChild);
+            expListView.setAdapter(listAdapter);
+
             return rootView;
+        }
+
+        private void prepareListData() {
+            listDataHeader = new ArrayList<String>();
+            listDataChild = new HashMap<String, List<String>>();
+
+            // Adding child data
+            listDataHeader.add("Top 250");
+            listDataHeader.add("Now Showing");
+            listDataHeader.add("Coming Soon..");
+
+            // Adding child data
+            List<String> top250 = new ArrayList<String>();
+            top250.add("The Shawshank Redemption");
+            top250.add("The Godfather");
+            top250.add("The Godfather: Part II");
+            top250.add("Pulp Fiction");
+            top250.add("The Good, the Bad and the Ugly");
+            top250.add("The Dark Knight");
+            top250.add("12 Angry Men");
+
+            List<String> nowShowing = new ArrayList<String>();
+            nowShowing.add("The Conjuring");
+            nowShowing.add("Despicable Me 2");
+            nowShowing.add("Turbo");
+            nowShowing.add("Grown Ups 2");
+            nowShowing.add("Red 2");
+            nowShowing.add("The Wolverine");
+
+            List<String> comingSoon = new ArrayList<String>();
+            comingSoon.add("2 Guns");
+            comingSoon.add("The Smurfs 2");
+            comingSoon.add("The Spectacular Now");
+            comingSoon.add("The Canyons");
+            comingSoon.add("Europa Report");
+
+            listDataChild.put(listDataHeader.get(0), top250); // Header, Child data
+            listDataChild.put(listDataHeader.get(1), nowShowing);
+            listDataChild.put(listDataHeader.get(2), comingSoon);
         }
     }
 
-    /**
-     * A {@link FragmentPagerAdapter} that returns a fragment corresponding to
-     * one of the sections/tabs/pages.
-     */
+
+
     public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
         public SectionsPagerAdapter(FragmentManager fm) {

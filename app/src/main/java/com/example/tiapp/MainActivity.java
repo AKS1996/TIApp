@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import com.example.tiapp.help.Help;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
