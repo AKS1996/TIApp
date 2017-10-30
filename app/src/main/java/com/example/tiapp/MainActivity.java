@@ -8,12 +8,14 @@ import com.example.tiapp.help.Help;
 
 public class MainActivity extends AppCompatActivity {
 
+    // TODO reduce styles.xml waste AppThemes
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        startActivity(new Intent(this, Help.class));
+        startActivity(new Intent(this, Settings.class));
+//        startActivity(new Intent(this, Help.class));
 //        startActivityForResult(new Intent(this, DotClass.class),1);
 //        SharedPreferences settings = getSharedPreferences("prefs", 0);
 //        if ( settings.getBoolean("newUser", true)) {

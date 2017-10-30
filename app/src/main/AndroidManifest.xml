@@ -10,7 +10,7 @@
         android:largeHeap="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/customTheme">
+        android:theme="@style/customTheme.NoActionBar">
         <activity android:name=".WelcomeViewFlipper" />
         <activity
             android:name=".LoginActivity"
@@ -27,8 +27,8 @@
         </activity>
         <activity
             android:name=".help.Help"
-            android:label="@string/title_activity_help"
-            android:theme="@style/customTheme.NoActionBar" />
+            android:label="@string/title_activity_help" />
+        <activity android:name=".Settings" />
     </application>
 
 </manifest>
