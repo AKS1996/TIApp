@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context="com.example.tiapp.profile.Profile">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbarProfile"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:theme="@style/customTheme.AppBarOverlay"
+        app:popupTheme="@style/customTheme.PopupOverlay">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="@dimen/appbar_padding_top"
+            android:layout_gravity="right"
+            android:background="@color/violet"
+            android:id="@+id/settingsIconProfile"
+            app:srcCompat="@drawable/gear_outline" />
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="?attr/colorPrimary">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:layout_width="@dimen/circle_image"
+            android:layout_height="@dimen/circle_image"
+            android:layout_gravity="center"
+            android:src="@drawable/cloud"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/appbar_padding_top"
+            android:text="Akshay Sharma"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="@dimen/double_activity_margin"
+            android:text="akshay.sharma.mat16@itbhu.ac.in"
+            android:textColor="@color/white"
+            android:textSize="16sp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="@color/orange"
+        android:padding="@dimen/double_activity_margin"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="301dp"
+            android:layout_height="wrap_content"
+            android:text="View My Achievement"
+            android:textColor="@color/white" />
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/orange"
+            android:id="@+id/dropdownProfile"
+            android:src="@drawable/ic_arrow_down"/>
+    </LinearLayout>
+
+    <TableLayout
+        android:id="@+id/fourBoxTableProfile"
+        android:layout_width="match_parent"
+        android:background="@color/l_grey"
+        android:visibility="gone"
+        android:layout_height="wrap_content" >
+    <TableRow>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:padding="@dimen/double_activity_margin"
+            android:layout_weight="1"
+            android:text="23 Reviews"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:background="@drawable/border"
+            android:padding="@dimen/double_activity_margin"
+            android:layout_height="wrap_content"
+            android:text="4 Badges"
+            android:layout_weight="1" />
+    </TableRow>
+
+    <TableRow>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:padding="@dimen/double_activity_margin"
+            android:text="25 Stories"
+            android:layout_weight="1" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:background="@drawable/border"
+            android:padding="@dimen/double_activity_margin"
+            android:layout_height="wrap_content"
+            android:text="2 Trading Cards"
+            android:layout_weight="1" />
+    </TableRow>
+
+</TableLayout>
+
+
+</LinearLayout>

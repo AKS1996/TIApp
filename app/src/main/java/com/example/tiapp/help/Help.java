@@ -40,7 +40,7 @@ public class Help extends AppCompatActivity implements NavigationView.OnNavigati
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        toolbar.setTitle("FAQ");
+        getSupportActionBar().setTitle("");
 
 
         // Tab part starts
