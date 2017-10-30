@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:id="@+id/drawer_layout_profile"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_height="match_parent"
     tools:context="com.example.tiapp.profile.Profile">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbarProfile"
@@ -81,44 +88,86 @@
         android:background="@color/l_grey"
         android:visibility="gone"
         android:layout_height="wrap_content" >
-    <TableRow>
-        <TextView
-            android:layout_width="0dp"
+        <TableRow>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:padding="@dimen/double_activity_margin"
+                android:layout_weight="1"
+                android:text="23 Reviews"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:background="@drawable/border"
+                android:padding="@dimen/double_activity_margin"
+                android:layout_height="wrap_content"
+                android:text="4 Badges"
+                android:layout_weight="1" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:padding="@dimen/double_activity_margin"
+                android:text="25 Stories"
+                android:layout_weight="1" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:background="@drawable/border"
+                android:padding="@dimen/double_activity_margin"
+                android:layout_height="wrap_content"
+                android:text="2 Trading Cards"
+                android:layout_weight="1" />
+        </TableRow>
+    </TableLayout>
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tabsProfile"
+            android:background="@color/white"
+            app:tabIndicatorColor="@color/navyBlue"
+            app:tabSelectedTextColor="@color/navyBlue"
+            app:tabTextColor="@color/d_grey"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.design.widget.TabItem
+                android:id="@+id/tabItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Badges" />
+
+            <android.support.design.widget.TabItem
+                android:id="@+id/tabItem2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Trading Cards" />
+
+        </android.support.design.widget.TabLayout>
+
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPagerProfile"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/border"
-            android:padding="@dimen/double_activity_margin"
-            android:layout_weight="1"
-            android:text="23 Reviews"/>
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
-        <TextView
-            android:layout_width="0dp"
-            android:background="@drawable/border"
-            android:padding="@dimen/double_activity_margin"
-            android:layout_height="wrap_content"
-            android:text="4 Badges"
-            android:layout_weight="1" />
-    </TableRow>
+    </LinearLayout>
 
-    <TableRow>
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:background="@drawable/border"
-            android:padding="@dimen/double_activity_margin"
-            android:text="25 Stories"
-            android:layout_weight="1" />
-
-        <TextView
-            android:layout_width="0dp"
-            android:background="@drawable/border"
-            android:padding="@dimen/double_activity_margin"
-            android:layout_height="wrap_content"
-            android:text="2 Trading Cards"
-            android:layout_weight="1" />
-    </TableRow>
-
-</TableLayout>
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        android:backgroundTint="@color/violet"
+        app:itemTextColor="@color/white"
+        app:headerLayout="@layout/nav_header_main"
+        app:menu="@menu/main_drawer" />
 
 
-</LinearLayout>
+</android.support.v4.widget.DrawerLayout>

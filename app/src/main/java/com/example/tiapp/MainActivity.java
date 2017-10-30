@@ -15,9 +15,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-//        startActivity(new Intent(this, Profile.class));
-//        startActivity(new Intent(this, Settings.class));
         startActivity(new Intent(this, Profile.class));
+//        startActivity(new Intent(this, Settings.class));
+//        startActivity(new Intent(this, Help.class));
 //        startActivityForResult(new Intent(this, DotClass.class),1);
 //        SharedPreferences settings = getSharedPreferences("prefs", 0);
 //        if ( settings.getBoolean("newUser", true)) {

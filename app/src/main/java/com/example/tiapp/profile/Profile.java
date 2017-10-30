@@ -1,16 +1,43 @@
 package com.example.tiapp.profile;
 
 import android.content.Intent;
+import android.support.design.widget.NavigationView;
+import android.support.design.widget.TabLayout;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.view.GravityCompat;
+import android.support.v4.view.ViewPager;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.ExpandableListView;
+import android.widget.GridLayout;
+import android.widget.GridView;
 import android.widget.TableLayout;
+import android.widget.TextView;
 
 import com.example.tiapp.R;
 import com.example.tiapp.Settings;
 
-public class Profile extends AppCompatActivity {
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+
+public class Profile extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     // TODO add badges icons
     // TODO Read data from json for every activity
     // TODO twitch graphics for all activities
@@ -44,5 +71,113 @@ public class Profile extends AppCompatActivity {
                 startActivity(new Intent(getApplication(), Settings.class));
             }
         });
+
+
+        // Tab part starts
+        SectionsPagerAdapter mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
+        ViewPager mViewPager = (ViewPager) findViewById(R.id.viewPagerProfile);
+        mViewPager.setAdapter(mSectionsPagerAdapter);
+        TabLayout tabLayout = (TabLayout) findViewById(R.id.tabsProfile);
+        mViewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
+        tabLayout.addOnTabSelectedListener(new TabLayout.ViewPagerOnTabSelectedListener(mViewPager));
+
+
+        // Nav part starts
+        final DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout_profile);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+                this, drawer, myToolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        drawer.addDrawerListener(toggle);
+        toggle.syncState();
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(this);
+        View headerview = navigationView.getHeaderView(0);
+        headerview.findViewById(R.id.cancelButton).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (drawer.isDrawerOpen(GravityCompat.START))
+                    drawer.closeDrawer(GravityCompat.START);
+            }
+        });
     }
+
+    @SuppressWarnings("StatementWithEmptyBody")
+    @Override
+    public boolean onNavigationItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.nav_story_selection:
+                break;
+            case R.id.nav_bookmarks:
+                break;
+            case R.id.nav_help:
+                break;
+            case R.id.nav_logout:
+                break;
+            case R.id.nav_rewards:
+                break;
+            case R.id.nav_profile:
+                break;
+            case R.id.nav_points:
+        }
+
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout_profile);
+        drawer.closeDrawer(GravityCompat.START);
+        return true;
+    }
+
+
+    public class SectionsPagerAdapter extends FragmentPagerAdapter {
+
+        public SectionsPagerAdapter(FragmentManager fm) {
+            super(fm);
+        }
+
+        @Override
+        public Fragment getItem(int position) {
+            // getItem is called to instantiate the fragment for the given page.
+            // Return a PlaceholderFragment (defined as a static inner class below).
+            return PlaceholderFragment.newInstance(position + 1);
+        }
+
+        @Override
+        public int getCount() {
+            // Show 2 total pages.
+            return 2;
+        }
+    }
+
+    public static class PlaceholderFragment extends Fragment {
+        private static final String ARG_SECTION_NUMBER = "section_number_profile_acitivity";
+
+        public PlaceholderFragment() {
+        }
+
+        public static PlaceholderFragment newInstance(int sectionNumber) {
+            PlaceholderFragment fragment = new PlaceholderFragment();
+            Bundle args = new Bundle();
+            args.putInt(ARG_SECTION_NUMBER, sectionNumber);
+            fragment.setArguments(args);
+            return fragment;
+        }
+
+        // TODO add dynamic image grid view
+        // TODO read json -> Img_URL, element_name, elemnt_descrep
+        @Override
+        public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                                 Bundle savedInstanceState) {
+            View rootView = inflater.inflate(R.layout.fragment_profile, container, false);
+
+            final List<String> gridList = new ArrayList<>();
+            final ArrayAdapter<String> gridViewArrayAdapter = new ArrayAdapter<>
+                    (getActivity(),android.R.layout.simple_list_item_1, gridList);
+
+            ((GridView) rootView.findViewById(R.id.gridViewProfile)).setAdapter(gridViewArrayAdapter);
+            for(int i=0;i<10;++i){
+                gridList.add("Section: "+getArguments().getInt(ARG_SECTION_NUMBER)+" Element "+i);
+            }
+            gridViewArrayAdapter.notifyDataSetChanged();
+
+            return rootView;
+        }
+    }
+
 }
