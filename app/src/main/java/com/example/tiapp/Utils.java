@@ -1,9 +1,13 @@
 package com.example.tiapp;
 
 import android.app.Activity;
+import android.content.Context;
 import android.graphics.Color;
 import android.os.Build;
 import android.support.v4.content.ContextCompat;
+
+import java.io.IOException;
+import java.io.InputStream;
 
 public class Utils {
 
@@ -26,6 +30,22 @@ public class Utils {
         Color.colorToHSV(color, hsv);
 //        hsv[2] *= 0.8f; // Darkens status bar a bit
         return Color.HSVToColor(hsv);
+    }
+
+    static public String loadJSONFromAsset(Context context,String fileName) {
+        String json;
+        try {
+            InputStream is = context.getAssets().open(fileName);
+            int size = is.available();
+            byte[] buffer = new byte[size];
+            is.read(buffer);
+            is.close();
+            json = new String(buffer, "UTF-8");
+        } catch (IOException ex) {
+            ex.printStackTrace();
+            return null;
+        }
+        return json;
     }
 
 

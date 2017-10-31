@@ -17,15 +17,18 @@ import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ExpandableListView;
 import android.widget.GridLayout;
 import android.widget.GridView;
 import android.widget.TableLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.tiapp.R;
 import com.example.tiapp.Settings;
+import com.example.tiapp.Utils;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -159,22 +162,28 @@ public class Profile extends AppCompatActivity implements NavigationView.OnNavig
             return fragment;
         }
 
-        // TODO add dynamic image grid view
-        // TODO read json -> Img_URL, element_name, elemnt_descrep
+        // TODO improv; store shit in DB, dont read again
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
             View rootView = inflater.inflate(R.layout.fragment_profile, container, false);
+            GridView gridView = (GridView) rootView.findViewById(R.id.gridViewProfile);
+            gridView.setAdapter(new GridViewAdapter(getContext(),getArguments().getInt(ARG_SECTION_NUMBER)));
 
-            final List<String> gridList = new ArrayList<>();
-            final ArrayAdapter<String> gridViewArrayAdapter = new ArrayAdapter<>
-                    (getActivity(),android.R.layout.simple_list_item_1, gridList);
+            gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                public void onItemClick(AdapterView<?> parent, View v,
+                                        int position, long id) {
 
-            ((GridView) rootView.findViewById(R.id.gridViewProfile)).setAdapter(gridViewArrayAdapter);
-            for(int i=0;i<10;++i){
-                gridList.add("Section: "+getArguments().getInt(ARG_SECTION_NUMBER)+" Element "+i);
-            }
-            gridViewArrayAdapter.notifyDataSetChanged();
+                    try {
+                        JSONObject obj = new JSONObject(Utils.loadJSONFromAsset(getContext(), "profile.json"));
+                        JSONArray selectedArray = obj.getJSONArray(getArguments().getInt(ARG_SECTION_NUMBER)+"");
+                        JSONObject content = selectedArray.getJSONObject(position);
+                        (new CustomDialogClass(getActivity(),content.getString("name"),content.getString("description"))).show();
+                    }catch(JSONException j){
+                        j.printStackTrace();
+                    }
+                }
+            });
 
             return rootView;
         }

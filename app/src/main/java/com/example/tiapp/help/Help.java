@@ -20,6 +20,7 @@ import android.view.ViewGroup;
 
 import android.widget.ExpandableListView;
 import com.example.tiapp.R;
+import com.example.tiapp.Utils;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -138,29 +139,13 @@ public class Help extends AppCompatActivity implements NavigationView.OnNavigati
             return rootView;
         }
 
-        public String loadJSONFromAsset() {
-            String json;
-            try {
-                InputStream is = getActivity().getAssets().open("help.json");
-                int size = is.available();
-                byte[] buffer = new byte[size];
-                is.read(buffer);
-                is.close();
-                json = new String(buffer, "UTF-8");
-            } catch (IOException ex) {
-                ex.printStackTrace();
-                return null;
-            }
-            return json;
-        }
-
         private void prepareListData(int section) {
             listDataHeader = new ArrayList<>();
             listDataChild = new HashMap<>();
             List<String> temp;
 
             try {
-                JSONObject obj = new JSONObject(loadJSONFromAsset());
+                JSONObject obj = new JSONObject(Utils.loadJSONFromAsset(getContext(),"help.json"));
                 JSONArray selectedArray = obj.getJSONArray(section+"");
 
                 for (int i = 0; i < selectedArray.length(); i++) {
