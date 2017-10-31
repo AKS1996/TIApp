@@ -31,6 +31,8 @@ import java.util.ArrayList;
 
 public class Points extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener  {
 
+    // TODO Goto card shop button
+    // TODO Improve UI
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

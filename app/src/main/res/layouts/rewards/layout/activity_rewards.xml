@@ -3,11 +3,11 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/drawer_layout_points"
+    android:id="@+id/drawer_layout_rewards"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="com.example.tiapp.points.Points">
+    tools:context="com.example.tiapp.rewards.Rewards">
 
 
     <LinearLayout
@@ -23,7 +23,7 @@
             android:theme="@style/customTheme.AppBarOverlay">
 
             <android.support.v7.widget.Toolbar
-                android:id="@+id/toolbarPoints"
+                android:id="@+id/toolbarRewards"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?attr/colorPrimary"
@@ -34,8 +34,8 @@
                     android:layout_width="match_parent"
                     android:paddingRight="@dimen/double_activity_margin"
                     android:layout_height="wrap_content"
-                    android:text="TI Points"
-                    android:drawableRight="@drawable/ic_info_outline_black_24dp"
+                    android:text="Rewards Shop"
+                    android:drawableRight="@drawable/ic_search_white"
                     android:textSize="24sp"
                     android:textColor="@color/white"
                     android:textAlignment="center"/>
@@ -49,38 +49,57 @@
                 android:drawableLeft="@drawable/coin_small"
                 android:paddingBottom="@dimen/double_activity_margin"
                 android:text="1000 pts"/>
-
-
-            <android.support.design.widget.TabLayout
-                android:id="@+id/tabsPoints"
-                android:background="@color/white"
-                app:tabIndicatorColor="@color/navyBlue"
-                app:tabSelectedTextColor="@color/navyBlue"
-                app:tabTextColor="@color/d_grey"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <android.support.design.widget.TabItem
-                    android:id="@+id/tabItem"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Achievements" />
-
-                <android.support.design.widget.TabItem
-                    android:id="@+id/tabItem2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Daily Tasks" />
-
-            </android.support.design.widget.TabLayout>
-
         </android.support.design.widget.AppBarLayout>
-
-        <android.support.v4.view.ViewPager
-            android:id="@+id/container"
+        <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+            android:background="@color/l_grey"
+            android:padding="@dimen/appbar_padding_top"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txtRewards"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="Order by:"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/txtRewards"
+                android:gravity="left"
+                android:text="Popularity"
+                android:textColor="@color/navyBlue"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.26"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:background="@color/l_grey"
+                android:maxHeight="@dimen/appbar_padding_top"
+                android:maxWidth="@dimen/appbar_padding_top"
+                android:src="@drawable/settings_icon"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </android.support.constraint.ConstraintLayout>
+
+        <GridView
+            android:layout_width="match_parent"
+            android:id="@+id/gridViewRewards"
+            android:numColumns="2"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_height="match_parent" />
     </LinearLayout>
 
     <android.support.design.widget.NavigationView

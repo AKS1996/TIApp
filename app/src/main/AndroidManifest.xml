@@ -11,13 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/customTheme.NoActionBar">
-        <activity android:name=".WelcomeViewFlipper" />
         <activity
-            android:name=".LoginActivity"
-            android:label="@string/title_activity_login" />
-        <activity
-            android:name=".DotClass"
-            android:theme="@style/AppTheme.NoActionBar" />
+        android:name=".DotClass"
+        android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -25,12 +21,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".help.Help"
-            android:label="@string/title_activity_help" />
+        <activity android:name=".WelcomeViewFlipper" />
+        <activity android:name=".LoginActivity"/>
+        <activity android:name=".help.Help" />
         <activity android:name=".Settings" />
         <activity android:name=".profile.Profile" />
-        <activity android:name=".points.Points"></activity>
+        <activity android:name=".points.Points" />
+        <activity android:name=".rewards.Rewards" />
     </application>
 
 </manifest>

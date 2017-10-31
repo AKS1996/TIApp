@@ -25,6 +25,7 @@ android {
                             'src/main/res/layouts/help',
                             'src/main/res/layouts/profile',
                             'src/main/res/layouts/points',
+                            'src/main/res/layouts/rewards',
                             'src/main/res/layouts/rest',
                             'src/main/res/layouts',
                             'src/main/res'

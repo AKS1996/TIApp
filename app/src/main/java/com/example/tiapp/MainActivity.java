@@ -7,6 +7,7 @@ import android.os.Bundle;
 import com.example.tiapp.help.Help;
 import com.example.tiapp.points.Points;
 import com.example.tiapp.profile.Profile;
+import com.example.tiapp.rewards.Rewards;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -16,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        startActivity(new Intent(this, Points.class));
+        startActivity(new Intent(this, Rewards.class));
 //        startActivity(new Intent(this, Profile.class));
 //        startActivity(new Intent(this, Settings.class));
 //        startActivity(new Intent(this, Help.class));
