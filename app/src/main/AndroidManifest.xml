@@ -29,7 +29,8 @@
             android:name=".help.Help"
             android:label="@string/title_activity_help" />
         <activity android:name=".Settings" />
-        <activity android:name=".profile.Profile"></activity>
+        <activity android:name=".profile.Profile" />
+        <activity android:name=".points.Points"></activity>
     </application>
 
 </manifest>
