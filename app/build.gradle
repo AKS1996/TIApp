@@ -26,6 +26,9 @@ android {
                             'src/main/res/layouts/profile',
                             'src/main/res/layouts/points',
                             'src/main/res/layouts/rewards',
+                            'src/main/res/layouts/story',
+                            'src/main/res/layouts/browse_story',
+                            'src/main/res/layouts/story_content',
                             'src/main/res/layouts/rest',
                             'src/main/res/layouts',
                             'src/main/res'

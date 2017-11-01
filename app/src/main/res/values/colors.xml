@@ -14,4 +14,8 @@
     <color name="material_stepper_bottom_bar_text">#FF7400</color>
     <color name="l_grey">#EAEAEA</color>
     <color name="d_grey">#6C6C6C</color>
+    <color name="storybutton_background">#fbec5f0e</color>
+    <color name="grey">#eaeaf1</color>
+    <color name="black_overlay">#66000000</color>
+    <color name="progressBar">#EFB700</color>
 </resources>

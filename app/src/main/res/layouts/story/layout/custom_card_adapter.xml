@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        card_view:cardCornerRadius="4dp"
+        >
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@mipmap/ic_launcher" />
+
+            <TextView
+                android:id="@+id/card_view_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="hdhsifhdihdjhifuhsuf"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                card_view:layout_constraintLeft_toRightOf="@id/image" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/es"
+                android:text="jdfhsdi"
+                card_view:layout_constraintLeft_toRightOf="@id/image"
+                card_view:layout_constraintTop_toBottomOf="@id/card_view_title" />
+
+            <TextView
+                android:id="@+id/matter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="The adapter provides access to the itemsin your data set, creates views for items, and replaces the consome of the views with new data items when the originitem is no longer visible.
+                                              "
+                card_view:layout_constraintLeft_toRightOf="@id/image"
+                card_view:layout_constraintTop_toBottomOf="@id/es" />
+
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v7.widget.CardView>
+</android.support.constraint.ConstraintLayout>

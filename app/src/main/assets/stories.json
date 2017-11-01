@@ -1,17 +1,42 @@
 {
-  "1":[
-    {"topic":"Lorem Ipsum 1","content":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce luctus congue mauris, in tristique lacus iaculis nec. Ut congue, lorem ut ultricies euismod, justo nisi eleifend enim, vel convallis ligula turpis volutpat lectus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse non ultrices nunc. Vestibulum maximus sodales tincidunt. Nam in arcu sit amet lorem semper vestibulum. Nunc euismod ex sed justo sodales, et vehicula nisi pretium."},
-    {"topic":"Lorem Ipsum 2","content":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce luctus congue mauris, in tristique lacus iaculis nec. Ut congue, lorem ut ultricies euismod, justo nisi eleifend enim, vel convallis ligula turpis volutpat lectus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse non ultrices nunc. Vestibulum maximus sodales tincidunt. Nam in arcu sit amet lorem semper vestibulum. Nunc euismod ex sed justo sodales, et vehicula nisi pretium."},
-    {"topic":"Lorem Ipsum 3","content":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce luctus congue mauris, in tristique lacus iaculis nec. Ut congue, lorem ut ultricies euismod, justo nisi eleifend enim, vel convallis ligula turpis volutpat lectus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse non ultrices nunc. Vestibulum maximus sodales tincidunt. Nam in arcu sit amet lorem semper vestibulum. Nunc euismod ex sed justo sodales, et vehicula nisi pretium."},
-    {"topic":"Lorem Ipsum 4","content":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce luctus congue mauris, in tristique lacus iaculis nec. Ut congue, lorem ut ultricies euismod, justo nisi eleifend enim, vel convallis ligula turpis volutpat lectus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse non ultrices nunc. Vestibulum maximus sodales tincidunt. Nam in arcu sit amet lorem semper vestibulum. Nunc euismod ex sed justo sodales, et vehicula nisi pretium."}
-  ],
-  "2":[
-    {"topic":"Lorem Ipsum 1","content":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce luctus congue mauris, in tristique lacus iaculis nec. Ut congue, lorem ut ultricies euismod, justo nisi eleifend enim, vel convallis ligula turpis volutpat lectus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse non ultrices nunc. Vestibulum maximus sodales tincidunt. Nam in arcu sit amet lorem semper vestibulum. Nunc euismod ex sed justo sodales, et vehicula nisi pretium."},
-    {"topic":"Lorem Ipsum 2","content":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce luctus congue mauris, in tristique lacus iaculis nec. Ut congue, lorem ut ultricies euismod, justo nisi eleifend enim, vel convallis ligula turpis volutpat lectus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse non ultrices nunc. Vestibulum maximus sodales tincidunt. Nam in arcu sit amet lorem semper vestibulum. Nunc euismod ex sed justo sodales, et vehicula nisi pretium."}
-  ],
-  "3":[
-    {"topic":"Lorem Ipsum 1","content":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce luctus congue mauris, in tristique lacus iaculis nec. Ut congue, lorem ut ultricies euismod, justo nisi eleifend enim, vel convallis ligula turpis volutpat lectus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse non ultrices nunc. Vestibulum maximus sodales tincidunt. Nam in arcu sit amet lorem semper vestibulum. Nunc euismod ex sed justo sodales, et vehicula nisi pretium."},
-    {"topic":"Lorem Ipsum 2","content":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce luctus congue mauris, in tristique lacus iaculis nec. Ut congue, lorem ut ultricies euismod, justo nisi eleifend enim, vel convallis ligula turpis volutpat lectus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse non ultrices nunc. Vestibulum maximus sodales tincidunt. Nam in arcu sit amet lorem semper vestibulum. Nunc euismod ex sed justo sodales, et vehicula nisi pretium."},
-    {"topic":"Lorem Ipsum 3","content":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce luctus congue mauris, in tristique lacus iaculis nec. Ut congue, lorem ut ultricies euismod, justo nisi eleifend enim, vel convallis ligula turpis volutpat lectus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse non ultrices nunc. Vestibulum maximus sodales tincidunt. Nam in arcu sit amet lorem semper vestibulum. Nunc euismod ex sed justo sodales, et vehicula nisi pretium."}
-  ]
+  "1":{
+    "title": "Story Title Lorem Ipsum",
+    "subtitle": "Keenland Race Course",
+    "chapters": [
+      {
+        "titleChapter": "Chapter Title Lorem Ipsum",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce luctus congue mauris, in tristique lacus iaculis nec. Ut congue, lorem ut ultricies euismod, justo nisi eleifend enim, vel convallis ligula turpis volutpat lectus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse non ultrices nunc. Vestibulum maximus sodales tincidunt. Nam in arcu sit amet lorem semper vestibulum. Nunc euismod ex sed justo sodales, et vehicula nisi pretium."
+      },
+      {
+        "titleChapter": "Chapter Title Lorem Ipsum",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce luctus congue mauris, in tristique lacus iaculis nec. Ut congue, lorem ut ultricies euismod, justo nisi eleifend enim, vel convallis ligula turpis volutpat lectus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse non ultrices nunc. Vestibulum maximus sodales tincidunt. Nam in arcu sit amet lorem semper vestibulum. Nunc euismod ex sed justo sodales, et vehicula nisi pretium."
+      },
+      {
+        "titleChapter": "Chapter Title Lorem Ipsum",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce luctus congue mauris, in tristique lacus iaculis nec. Ut congue, lorem ut ultricies euismod, justo nisi eleifend enim, vel convallis ligula turpis volutpat lectus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse non ultrices nunc. Vestibulum maximus sodales tincidunt. Nam in arcu sit amet lorem semper vestibulum. Nunc euismod ex sed justo sodales, et vehicula nisi pretium."
+      },
+      {
+        "titleChapter": "Chapter Title Lorem Ipsum",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce luctus congue mauris, in tristique lacus iaculis nec. Ut congue, lorem ut ultricies euismod, justo nisi eleifend enim, vel convallis ligula turpis volutpat lectus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse non ultrices nunc. Vestibulum maximus sodales tincidunt. Nam in arcu sit amet lorem semper vestibulum. Nunc euismod ex sed justo sodales, et vehicula nisi pretium."
+      }
+    ]
+  },
+  "2":{
+    "title": "Story Title Dolor Amet",
+    "subtitle": "Keenland Race Course",
+    "chapters": [
+      {
+        "titleChapter": "Chapter Title Lorem Ipsum",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce luctus congue mauris, in tristique lacus iaculis nec. Ut congue, lorem ut ultricies euismod, justo nisi eleifend enim, vel convallis ligula turpis volutpat lectus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse non ultrices nunc. Vestibulum maximus sodales tincidunt. Nam in arcu sit amet lorem semper vestibulum. Nunc euismod ex sed justo sodales, et vehicula nisi pretium."
+      },
+      {
+        "titleChapter": "Chapter Title Lorem Ipsum",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce luctus congue mauris, in tristique lacus iaculis nec. Ut congue, lorem ut ultricies euismod, justo nisi eleifend enim, vel convallis ligula turpis volutpat lectus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse non ultrices nunc. Vestibulum maximus sodales tincidunt. Nam in arcu sit amet lorem semper vestibulum. Nunc euismod ex sed justo sodales, et vehicula nisi pretium."
+      },
+      {
+        "titleChapter": "Chapter Title Lorem Ipsum",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce luctus congue mauris, in tristique lacus iaculis nec. Ut congue, lorem ut ultricies euismod, justo nisi eleifend enim, vel convallis ligula turpis volutpat lectus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse non ultrices nunc. Vestibulum maximus sodales tincidunt. Nam in arcu sit amet lorem semper vestibulum. Nunc euismod ex sed justo sodales, et vehicula nisi pretium."
+      }
+    ]
+  }
 }

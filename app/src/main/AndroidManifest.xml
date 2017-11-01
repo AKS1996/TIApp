@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.tiapp">
 
     <application
@@ -11,9 +12,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/customTheme.NoActionBar">
-        <activity
-        android:name=".DotClass"
-        android:theme="@style/AppTheme.NoActionBar" />
+
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,13 +20,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".DotClass" />
+        <activity android:name=".storyContent.StoryContent" />
         <activity android:name=".WelcomeViewFlipper" />
-        <activity android:name=".LoginActivity"/>
+        <activity android:name=".LoginActivity" android:theme="@style/customTheme.StatusBarOverlay"/>
         <activity android:name=".help.Help" />
         <activity android:name=".Settings" />
         <activity android:name=".profile.Profile" />
         <activity android:name=".points.Points" />
         <activity android:name=".rewards.Rewards" />
+        <activity android:name=".browse_story.CameraActivity" />
+        <activity android:name=".browse_story.BrowseStory" android:theme="@style/customTheme.StatusBarOverlay"/>
+        <activity android:name=".story.Story" />
     </application>
 
 </manifest>

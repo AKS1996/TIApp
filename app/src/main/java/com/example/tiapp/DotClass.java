@@ -18,9 +18,9 @@ public class DotClass extends DotStepper {
         setTitle("Thoroughbred Insider");
         setDarkPrimaryColor(R.color.white);
 
-        addStep(createFragment(new StepSample()));
-        addStep(createFragment(new StepSample()));
-        addStep(createFragment(new StepSample()));
+        addStep(createFragment(new PreStory()));
+        addStep(createFragment(new PreStory()));
+        addStep(createFragment(new PreStory()));
 
         super.onCreate(savedInstanceState);
     }

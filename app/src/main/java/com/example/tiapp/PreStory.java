@@ -8,7 +8,7 @@ import android.support.v7.widget.Toolbar;
 
 import com.github.fcannizzaro.materialstepper.AbstractStep;
 
-public class StepSample extends AbstractStep {
+public class PreStory extends AbstractStep {
 
     private int i = 1;
     private String[] titles = new String[3];
