@@ -1,19 +1,31 @@
 package com.topcoder.timobile;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.support.v7.widget.Toolbar;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+import android.widget.TextView;
 
 import com.github.fcannizzaro.materialstepper.AbstractStep;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class PreStory extends AbstractStep {
 
     private int i = 1;
     private String[] titles = new String[3];
+    ArrayAdapter<String> adapter;
 
-    // TODO Get JSON data drom API's
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         titles[0] = "1. SET UP YOUR LOCATION";
@@ -21,16 +33,39 @@ public class PreStory extends AbstractStep {
         titles[2] = "3. SELECT THE RACETRACKS";
         Utils.darkenStatusBar(getActivity(),R.color.violet);
 
+        i = getArguments().getInt("position", 0);
         View v;
-        if (getArguments().getInt("position", 0) == 1) {
+        if (i == 1) {
             v = inflater.inflate(R.layout.pre_story1, container, false);
-            ((Toolbar) v.findViewById(R.id.toolbarPreStory1)).setTitle(titles[0]);
+            ((TextView) v.findViewById(R.id.toolbarPreStory1)).setText(titles[i-1]);
 
         } else {
             v = inflater.inflate(R.layout.pre_story2, container, false);
-            ((Toolbar) v.findViewById(R.id.toolbarPreStory2)).setTitle(titles[1]);
+            ((TextView) v.findViewById(R.id.toolbarPreStory2)).setText(titles[i-1]);
+
+
+            ListView listView = (ListView) v.findViewById(R.id.listViewPreStory);
+            List<String> listContents = loadContents(getContext(),i);
+            adapter = new ArrayAdapter<>(v.getContext(),android.R.layout.simple_list_item_multiple_choice, listContents);
+            listView.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
+            listView.setAdapter(adapter);
         }
         return v;
+    }
+
+    private List<String> loadContents(Context context, int position){
+        List<String> listContents = new ArrayList<>();
+        try{
+            JSONObject jsonObject = new JSONObject(Utils.loadJSONFromAsset(context,"prestory.json"));
+            JSONArray jsonArray = jsonObject.getJSONArray(position+"");
+
+            for (int i = 0; i < jsonArray.length(); i++)
+                listContents.add(jsonArray.getString(i));
+
+        }catch (JSONException j){
+        }
+
+        return listContents;
     }
 
     @Override

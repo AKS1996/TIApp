@@ -44,9 +44,9 @@
 
     <style name="customTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
-    <style name="ButtonTagsBrowseActivity" parent="Base.Widget.AppCompat.Button">
-        <solid android:color="#00A460"/>
-        <solid android:textColor="@color/white"/>
-    </style>
+    <!--<style name="button_tags_browse" parent="Base.Widget.AppCompat.Button">-->
+        <!--<solid android:color="#00A460"/>-->
+        <!--<solid android:textColor="@color/white"/>-->
+    <!--</style>-->
 
 </resources>

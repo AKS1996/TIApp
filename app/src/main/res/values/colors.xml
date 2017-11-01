@@ -18,4 +18,5 @@
     <color name="grey">#eaeaf1</color>
     <color name="black_overlay">#66000000</color>
     <color name="progressBar">#EFB700</color>
+    <color name="myRed">#FF2E42</color>
 </resources>

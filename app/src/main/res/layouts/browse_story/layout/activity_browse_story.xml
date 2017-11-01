@@ -142,12 +142,12 @@
             android:text="Tabs"
             android:layout_marginTop="8dp"
             android:textStyle="bold"/>
-        <LinearLayout
+        <ListView
+            android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <Button
                 android:layout_width="wrap_content"
-                android:style="@style/ButtonTagsBrowseActivity"
                 android:layout_height="wrap_content"
                 android:text="horseracing"/>
 
@@ -156,7 +156,7 @@
                 android:layout_height="wrap_content"
                 android:text="button1"/>
 
-        </LinearLayout>
+        </ListView>
     </LinearLayout>
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"

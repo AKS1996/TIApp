@@ -17,12 +17,18 @@
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:gravity="center"
-
             android:background="@color/violet"
             android:orientation="vertical" >
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Skip This!"
+                android:padding="@dimen/appbar_padding_top"
+                android:textColor="@color/white"
+                android:layout_gravity="right"/>
+
             <ImageView
-                android:layout_marginTop="15dp"
                 android:id="@+id/imageViewWelcome1"
                 android:contentDescription="@string/cd1"
                 android:layout_width="wrap_content"
@@ -38,8 +44,15 @@
             android:background="@color/orange"
             android:orientation="vertical" >
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Skip This!"
+                android:padding="@dimen/appbar_padding_top"
+                android:textColor="@color/white"
+                android:layout_gravity="right"/>
+
             <ImageView
-                android:layout_marginTop="15dp"
                 android:id="@+id/imageViewWelcome2"
                 android:contentDescription="@string/cd1"
                 android:layout_width="wrap_content"
@@ -55,8 +68,15 @@
             android:background="@color/green"
             android:orientation="vertical" >
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Skip This!"
+                android:padding="@dimen/appbar_padding_top"
+                android:textColor="@color/white"
+                android:layout_gravity="right"/>
+
             <ImageView
-                android:layout_marginTop="15dp"
                 android:id="@+id/imageViewWelcome3"
                 android:contentDescription="@string/cd1"
                 android:layout_width="wrap_content"

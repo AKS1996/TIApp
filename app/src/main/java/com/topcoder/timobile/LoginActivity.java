@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class LoginActivity extends AppCompatActivity {
@@ -21,16 +22,17 @@ public class LoginActivity extends AppCompatActivity {
         findViewById(R.id.sign_in_email).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (email.getText().toString().equals("hello") && password.getText().toString().equals("world")){
+                if (email.getText().toString().equals(getResources().getString(R.string.login_email)) && password.getText().toString().equals(getResources().getString(R.string.login_password))){
                     SharedPreferences settings = getSharedPreferences("prefs", 0);
                     SharedPreferences.Editor editor = settings.edit();
                     editor.putBoolean("newUser", false);
                     editor.apply();
-
                     end();
                 }
-                else
-                    Toast.makeText(LoginActivity.this,"Invalid Id password",Toast.LENGTH_SHORT).show();
+                else {
+                    findViewById(R.id.textErrorLogin).setVisibility(View.VISIBLE);
+                    findViewById(R.id.sign_in_email).setBackgroundColor(getResources().getColor(R.color.myRed));
+                }
 
             }
         });
