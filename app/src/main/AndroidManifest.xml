@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.tiapp">
+    package="com.topcoder.timobile">
 
     <application
         android:allowBackup="true"
@@ -13,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/customTheme.NoActionBar">
 
-        <activity android:name=".MainActivity">
+        <activity android:name="com.topcoder.timobile.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -21,18 +20,18 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".DotClass" />
-        <activity android:name=".storyContent.StoryContent" />
-        <activity android:name=".WelcomeViewFlipper" />
-        <activity android:name=".LoginActivity" android:theme="@style/customTheme.StatusBarOverlay"/>
-        <activity android:name=".help.Help" />
-        <activity android:name=".Settings" />
-        <activity android:name=".profile.Profile" />
-        <activity android:name=".points.Points" />
-        <activity android:name=".rewards.Rewards" />
-        <activity android:name=".browse_story.CameraActivity" />
-        <activity android:name=".browse_story.BrowseStory" android:theme="@style/customTheme.StatusBarOverlay"/>
-        <activity android:name=".story.Story" />
+        <activity android:name="com.topcoder.timobile.DotClass" />
+        <activity android:name="com.topcoder.timobile.storyContent.StoryContent" />
+        <activity android:name="com.topcoder.timobile.WelcomeViewFlipper" />
+        <activity android:name="com.topcoder.timobile.LoginActivity" android:theme="@style/customTheme.StatusBarOverlay"/>
+        <activity android:name="com.topcoder.timobile.help.Help" />
+        <activity android:name="com.topcoder.timobile.Settings" />
+        <activity android:name="com.topcoder.timobile.profile.Profile" />
+        <activity android:name="com.topcoder.timobile.points.Points" />
+        <activity android:name="com.topcoder.timobile.rewards.Rewards" />
+        <activity android:name="com.topcoder.timobile.browse_story.CameraActivity" />
+        <activity android:name="com.topcoder.timobile.browse_story.BrowseStory" android:theme="@style/customTheme.StatusBarOverlay"/>
+        <activity android:name="com.topcoder.timobile.story.Story" />
     </application>
 
 </manifest>

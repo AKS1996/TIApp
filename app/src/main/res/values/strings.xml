@@ -21,9 +21,7 @@
     <string name="tab_text_2">Lorem Topic 2</string>
     <string name="tab_text_3">Lorem Topic 3</string>
     <string name="tab_text_4">Lorem Topic 4</string>
-    <string name="section_format">Hello World from section: %1$d</string>
 
-    <string name="lorem">CardsAndListshdgfuhsf</string>
     <string name="smalllorem">CardsAnfuhfuh huhfuwhfuh he8fuhweusfhuiufhwiufhwieufhdListshdgfuhsf</string>
     <string name="topic">or setGroupIndicator(Drawable) (or the corresponding XML attributes) to set these indicators (see the docs for each method to see additional state that each Drawable can have). The default style</string>
 

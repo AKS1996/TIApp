@@ -1,63 +1,118 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:orientation="vertical"
     android:layout_height="match_parent"
-    android:background="@drawable/login"
-    tools:context="com.example.tiapp.LoginActivity">
+    android:background="@drawable/login_dim"
+    tools:context="com.topcoder.timobile.LoginActivity">
 
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/logo" />
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.14"
+        app:srcCompat="@drawable/logo_small"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:orientation="vertical">
+        android:layout_marginBottom="86dp"
+        android:orientation="vertical"
+        android:padding="@dimen/double_activity_margin"
+        app:layout_constraintBottom_toBottomOf="parent">
 
         <EditText
             android:id="@+id/editTextEmail"
-            android:alpha="0.4"
             android:layout_width="match_parent"
-            android:inputType="textEmailAddress"
-            android:drawableLeft="@drawable/ic_person_outline_black_24dp"
             android:layout_height="wrap_content"
-            android:hint="Email" />
+            android:textColor="@color/white"
+            android:backgroundTint="@color/white"
+            android:alpha="0.8"
+            android:drawableLeft="@drawable/ic_person_outline_black_24dp"
+            android:fontFamily="@font/open_sans_light"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:textColorHint="@color/white" />
 
 
         <EditText
             android:id="@+id/editTextPassword"
-            android:inputType="textPassword"
-            android:alpha="0.4"
-            android:drawableLeft="@drawable/ic_lock_outline_black_24dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Password" />
+            android:backgroundTint="@color/white"
+            android:textColor="@color/white"
+            android:alpha="0.8"
+            android:drawableLeft="@drawable/ic_lock_outline_black_24dp"
+            android:fontFamily="@font/open_sans_light"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:textColorHint="@color/white" />
 
-    <Button
-        android:id="@+id/sign_in_email"
-        android:layout_width="match_parent"
-        android:layout_marginTop="16dp"
-        android:paddingTop="16dp"
-        android:paddingBottom="16dp"
-        android:layout_height="wrap_content"
-        android:background="@color/navyBlue"
-        android:text="Sign In" />
+        <Button
+            android:id="@+id/sign_in_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@color/navyBlue"
+            android:paddingBottom="16dp"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:paddingTop="16dp"
+            android:text="Sign In" />
 
-    <Button
-        android:id="@+id/sign_in_fb"
-        android:layout_width="match_parent"
-        android:layout_marginTop="16dp"
-        android:paddingTop="16dp"
-        android:paddingBottom="16dp"
-        android:layout_height="wrap_content"
-        android:textColor="@color/white"
-        android:background="@color/FBBlue"
-        android:text="Sign In with Facebook" />
+        <Button
+            android:id="@+id/sign_in_fb"
+            android:layout_width="match_parent"
+            android:textAllCaps="false"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@color/FBBlue"
+            android:paddingBottom="16dp"
+            android:paddingTop="16dp"
+            android:text="Sign In with Facebook"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingTop="@dimen/triple_activity_margin"
+            android:text="Forgot your password?"
+            android:textColor="@color/orange" />
     </LinearLayout>
-</LinearLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/double_activity_margin"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Don\'t have an account?"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewLoginSignup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign Up"
+            android:textColor="@color/navyBlue"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/textView"
+            app:layout_constraintTop_toTopOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+</android.support.constraint.ConstraintLayout>

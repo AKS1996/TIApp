@@ -4,7 +4,7 @@
     android:id="@+id/constraintLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.tiapp.profile.Profile$PlaceholderFragment">
+    tools:context="com.topcoder.timobile.profile.Profile$PlaceholderFragment">
 
     <GridView
         android:layout_width="match_parent"

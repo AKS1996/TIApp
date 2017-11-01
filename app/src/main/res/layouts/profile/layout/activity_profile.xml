@@ -7,7 +7,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_height="match_parent"
-    tools:context="com.example.tiapp.profile.Profile">
+    tools:context="com.topcoder.timobile.profile.Profile">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -57,11 +57,12 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/open_sans_light"
             android:gravity="center"
             android:paddingBottom="@dimen/double_activity_margin"
             android:text="akshay.sharma.mat16@itbhu.ac.in"
             android:textColor="@color/white"
-            android:textSize="16sp"/>
+            android:textSize="16sp" />
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
