@@ -236,12 +236,14 @@
 
     <Button
         android:layout_width="match_parent"
+        android:id="@+id/CollectRewardsButton"
         android:layout_height="wrap_content"
         android:textAllCaps="false"
         android:layout_margin="@dimen/appbar_padding_top"
         android:textColor="@color/white"
         android:background="@color/d_grey"
         android:text="Collect Rewards"
+        android:clickable="false"
         app:layout_constraintTop_toBottomOf="@id/threeElementLayout" />
 
 </LinearLayout>

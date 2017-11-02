@@ -2,6 +2,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.topcoder.timobile">
 
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-permission-sdk-23 android:name="android.permission.CAMERA" />
+    <uses-permission-sdk-23 android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:hardwareAccelerated="true"
@@ -11,27 +17,30 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/customTheme.NoActionBar">
-
-        <activity android:name="com.topcoder.timobile.MainActivity">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name="com.topcoder.timobile.DotClass" />
-        <activity android:name="com.topcoder.timobile.storyContent.StoryContent" />
-        <activity android:name="com.topcoder.timobile.WelcomeViewFlipper" />
-        <activity android:name="com.topcoder.timobile.LoginActivity" android:theme="@style/customTheme.StatusBarOverlay"/>
-        <activity android:name="com.topcoder.timobile.help.Help" />
-        <activity android:name="com.topcoder.timobile.Settings" />
-        <activity android:name="com.topcoder.timobile.profile.Profile" />
-        <activity android:name="com.topcoder.timobile.points.Points" />
-        <activity android:name="com.topcoder.timobile.rewards.Rewards" />
-        <activity android:name="com.topcoder.timobile.browse_story.CameraActivity" />
-        <activity android:name="com.topcoder.timobile.browse_story.BrowseStory" android:theme="@style/customTheme.StatusBarOverlay"/>
-        <activity android:name="com.topcoder.timobile.story.Story" />
+        <activity android:name=".DotClass" />
+        <activity android:name=".storyContent.StoryContent" />
+        <activity android:name=".WelcomeViewFlipper" />
+        <activity
+            android:name=".LoginActivity"
+            android:theme="@style/customTheme.StatusBarOverlay" />
+        <activity android:name=".help.Help" />
+        <activity android:name=".Settings" />
+        <activity android:name=".profile.Profile" />
+        <activity android:name=".points.Points" />
+        <activity android:name=".rewards.Rewards" />
+        <activity android:name=".browse_story.CameraActivity" />
+        <activity
+            android:name=".browse_story.BrowseStory"
+            android:theme="@style/customTheme.StatusBarOverlay" />
+        <activity android:name=".story.Story" />
+        <activity android:name=".Welcome"></activity>
     </application>
 
 </manifest>

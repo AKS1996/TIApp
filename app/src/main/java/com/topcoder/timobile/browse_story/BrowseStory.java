@@ -39,6 +39,7 @@ public class BrowseStory extends AppCompatActivity implements View.OnClickListen
         mFavouriteButton.setOnClickListener(this);
         mBackButton.setOnClickListener(this);
         mCameraButton.setOnClickListener(this);
+        findViewById(R.id.cameraintent).setEnabled(readRewardState());
     }
 
     private void setPreviousStateForFav() {
@@ -123,8 +124,13 @@ public class BrowseStory extends AppCompatActivity implements View.OnClickListen
     private boolean readState() {
         SharedPreferences aSharedPreferences = this.getSharedPreferences(
                 "Favourite", Context.MODE_PRIVATE);
-        return aSharedPreferences.getBoolean("State", true);
+        return aSharedPreferences.getBoolean("State", false);
     }
 
+    private boolean readRewardState() {
+        SharedPreferences aSharedPreferences = this.getSharedPreferences(
+                "Reward", Context.MODE_PRIVATE);
+        return aSharedPreferences.getBoolean("AllowRewards", false);
+    }
 }
 

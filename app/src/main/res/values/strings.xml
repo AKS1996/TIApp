@@ -25,15 +25,10 @@
     <string name="tab_text_3">Lorem Topic 3</string>
     <string name="tab_text_4">Lorem Topic 4</string>
 
-    <string name="smalllorem">CardsAnfuhfuh huhfuwhfuh he8fuhweusfhuiufhwiufhwieufhdListshdgfuhsf</string>
     <string name="topic">or setGroupIndicator(Drawable) (or the corresponding XML attributes) to set these indicators (see the docs for each method to see additional state that each Drawable can have). The default style</string>
 
     <string name="title_activity_camera">CameraActivity</string>
     <string name="dummy_button">Dummy Button</string>
-    <string name="dummy_content">DUMMY\nCONTENT</string>
-
-    <string name="ms_prev"></string>
-    <string name="ms_next"></string>
 
     <string name="congratutions">"Congratulations"</string>
     <string name="star">"  30 pts"</string>

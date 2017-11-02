@@ -3,6 +3,8 @@ package com.topcoder.timobile.browse_story;
 import android.app.Activity;
 
 import android.app.AlertDialog;
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.graphics.drawable.ColorDrawable;
 import android.hardware.Camera;
 import android.os.Environment;
@@ -42,6 +44,7 @@ public class CameraActivity extends Activity {
             @Override
             public void onClick(View v) {
                 mCamera.takePicture(null, null, mPicture);
+                setAllowRewards();
                 showDialog();
             }
         });
@@ -144,10 +147,16 @@ public class CameraActivity extends Activity {
         continueStory.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 dialog.dismiss();
                 finish();
             }
         });
+    }
+
+    private void setAllowRewards() {
+        SharedPreferences sharedPreferences = this.getSharedPreferences("Reward",Context.MODE_PRIVATE);
+        SharedPreferences.Editor s = sharedPreferences.edit();
+        s.putBoolean("AllowRewards", true);
+        s.apply();
     }
 }

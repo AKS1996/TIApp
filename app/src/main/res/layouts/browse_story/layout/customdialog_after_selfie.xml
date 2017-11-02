@@ -40,12 +40,14 @@
         android:textStyle="bold"/>
     <Button
         android:layout_marginTop="130dp"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#023"
+        android:background="@color/navyBlue"
+        android:layout_marginLeft="@dimen/appbar_padding_top"
+        android:layout_marginRight="@dimen/appbar_padding_top"
         android:textColor="@android:color/white"
         android:layout_gravity="center"
-        android:text="@string/storycontinue"
+        android:text="Continue Story"
         android:id="@+id/continuestory"/>
 
 </LinearLayout>

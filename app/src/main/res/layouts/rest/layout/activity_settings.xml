@@ -29,6 +29,15 @@
             android:textSize="24sp"
             android:textColor="@color/white"
             android:layout_gravity="center"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/violet"
+            android:text="Edit"
+            android:layout_gravity="right"
+            android:textColor="@color/white"
+            android:id="@+id/EditButtonSettings" />
     </android.support.v7.widget.Toolbar>
 
     <LinearLayout
@@ -43,6 +52,7 @@
             android:layout_width="@dimen/circle_image"
             android:layout_height="@dimen/circle_image"
             android:layout_gravity="center"
+            android:id="@+id/ImageViewSettings"
             android:src="@drawable/cloud"/>
 
         <TextView
