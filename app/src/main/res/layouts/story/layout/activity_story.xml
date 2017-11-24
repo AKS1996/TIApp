@@ -9,6 +9,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:orientation="vertical"
+        android:background="@color/l_grey"
         android:layout_height="wrap_content">
 
     <android.support.v7.widget.Toolbar
@@ -19,9 +20,20 @@
         android:theme="@style/customTheme.AppBarOverlay"
         app:popupTheme="@style/customTheme.PopupOverlay" />
 
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/secondaryToolbarStory"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:theme="@style/customTheme.AppBarOverlay"
+        app:popupTheme="@style/customTheme.PopupOverlay" />
+
         <ListView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:divider="@color/l_grey"
+            android:padding="@dimen/appbar_padding_top"
+            android:dividerHeight="@dimen/double_activity_margin"
             android:id="@+id/card_list_view"/>
     </LinearLayout>
 

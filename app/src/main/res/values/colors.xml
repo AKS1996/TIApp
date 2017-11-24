@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="violet">#4C006C</color>
-    <color name="violetTitleBar">#36004A</color>
     <color name="orange">#FF7400</color>
     <color name="green">#00A460</color>
     <color name="navyBlue">#0683DA</color>
@@ -15,8 +13,6 @@
     <color name="l_grey">#EAEAEA</color>
     <color name="d_grey">#6C6C6C</color>
     <color name="storybutton_background">#fbec5f0e</color>
-    <color name="grey">#eaeaf1</color>
-    <color name="black_overlay">#66000000</color>
     <color name="progressBar">#EFB700</color>
     <color name="myRed">#FF2E42</color>
 </resources>

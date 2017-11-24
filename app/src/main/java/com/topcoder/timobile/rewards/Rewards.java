@@ -1,5 +1,6 @@
 package com.topcoder.timobile.rewards;
 
+import android.content.Intent;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -13,6 +14,10 @@ import android.widget.AdapterView;
 import android.widget.GridView;
 import com.topcoder.timobile.R;
 import com.topcoder.timobile.Utils;
+import com.topcoder.timobile.help.Help;
+import com.topcoder.timobile.points.Points;
+import com.topcoder.timobile.profile.Profile;
+import com.topcoder.timobile.story.Story;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -82,19 +87,19 @@ public class Rewards extends AppCompatActivity implements NavigationView.OnNavig
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.nav_story_selection:
+            case R.id.nav_story_selection:startActivity(new Intent(this, Story.class));
                 break;
             case R.id.nav_bookmarks:
                 break;
-            case R.id.nav_help:
+            case R.id.nav_help:startActivity(new Intent(this, Help.class));
                 break;
-            case R.id.nav_logout:
+            case R.id.nav_logout:Utils.logout(getBaseContext());
                 break;
-            case R.id.nav_rewards:
+            case R.id.nav_rewards:startActivity(new Intent(this, Rewards.class));
                 break;
-            case R.id.nav_profile:
+            case R.id.nav_profile:startActivity(new Intent(this, Profile.class));
                 break;
-            case R.id.nav_points:
+            case R.id.nav_points:startActivity(new Intent(this, Points.class));
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout_rewards);

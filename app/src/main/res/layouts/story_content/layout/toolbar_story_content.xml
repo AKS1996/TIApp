@@ -8,13 +8,11 @@
         android:layout_width="32dp"
         android:layout_height="32dp"
         android:background="@color/violet"
-        android:id="@+id/backButtonStoryContent"
         android:src="@drawable/ic_left_arrow_white"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
     <TextView
-        android:id="@+id/StoryContentTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@color/violet"
@@ -23,12 +21,4 @@
         android:textSize="16sp"
         android:text="Chapter"
         android:layout_centerInParent="true"/>
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/font"
-        android:padding="8dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"/>
 </RelativeLayout>

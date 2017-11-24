@@ -1,40 +1,25 @@
 <resources>
     <string name="app_name">TI App</string>
     <string name="cd1">Image for Welcome Screen</string>
-    <string name="title_activity_login">Sign In</string>
 
-    <!-- Strings related to login -->
-    <string name="prompt_email">Email</string>
-    <string name="prompt_password">Password</string>
-    <string name="action_sign_in_FB">Sign in with Facebook</string>
-    <string name="action_sign_in_short">Sign in</string>
-    <string name="title_activity_pre_story">PreStory</string>
     <string name="pre_story_descrep">Let our App use your phone\'s GPS to automatically add stories if they are near your location</string>
-
-    <string name="action_settings">Settings</string>
-    <string name="title_activity_main">Main</string>
 
     <string name="login_email">Hello</string>
     <string name="login_password">World</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="title_activity_help">Help</string>
     <string name="tab_text_1">Lorem Topic 1</string>
     <string name="tab_text_2">Lorem Topic 2</string>
     <string name="tab_text_3">Lorem Topic 3</string>
-    <string name="tab_text_4">Lorem Topic 4</string>
 
-    <string name="topic">or setGroupIndicator(Drawable) (or the corresponding XML attributes) to set these indicators (see the docs for each method to see additional state that each Drawable can have). The default style</string>
-
-    <string name="title_activity_camera">CameraActivity</string>
-    <string name="dummy_button">Dummy Button</string>
+    <string name="topic">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce luctus congue mauris, in tristique lacus iaculis nec. Ut congue, lorem ut ultricies euismod, justo nisi eleifend enim, vel convallis ligula turpis volutpat lectus. Interdum et </string>
 
     <string name="congratutions">"Congratulations"</string>
     <string name="star">"  30 pts"</string>
     <string name="taskcompleted">"Task is Completed"</string>
-    <string name="storycontinue">"continuestory"</string>
-    <string name="comments">"comments"</string>
+    <string name="comments">Comments</string>
+    <string name="image_description">This is an image</string>
 
     <string name="story_position">story_position</string>
 </resources>

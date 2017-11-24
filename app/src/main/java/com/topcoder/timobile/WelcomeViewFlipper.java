@@ -85,6 +85,7 @@ public class WelcomeViewFlipper extends Activity {
                 break;
         }
 
+        if (currentWindow<=3 && currentWindow >= 1)
         textViewSmall.setText(textSmall.get(currentWindow-1));
         return false;
     }
@@ -98,9 +99,9 @@ public class WelcomeViewFlipper extends Activity {
     }
 
     private void end() {
-        SharedPreferences settings = getSharedPreferences("prefs", 0);
+        SharedPreferences settings = getSharedPreferences(Utils.myPrefs, 0);
         SharedPreferences.Editor editor = settings.edit();
-        editor.putBoolean("firstRun", false);
+        editor.putBoolean(Utils.firstRun, false);
         editor.apply();
 
         finish();

@@ -16,7 +16,6 @@ public class BrowseStory extends AppCompatActivity implements View.OnClickListen
     private ImageButton mFavouriteButton,mBackButton;
     private Button mTabSwitch,mCameraButton;
     private LinearLayout threeElementLayout;
-    private Boolean tabsBoolean ;
     private LinearLayout storyProgress;
     private Boolean viewstate=false;
 

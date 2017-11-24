@@ -23,6 +23,7 @@ import java.util.List;
 public class Welcome extends AppCompatActivity {
     static List<String> textSmall;
     static String textLarge;
+    static int total=0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,12 +41,16 @@ public class Welcome extends AppCompatActivity {
             textLarge = j.getMessage();
         }
 
+
+
         // Tab part starts
         ViewPager mViewPager = (ViewPager) findViewById(R.id.viewPagerWelcome);
         mViewPager.setAdapter(new FragmentPagerAdapter(getSupportFragmentManager()) {
             @Override
             public Fragment getItem(int position) {
-                return PlaceholderFragment.newInstance(position);
+                final PlaceholderFragment placeholderFragment= new PlaceholderFragment();
+                placeholderFragment.setPosition(position);
+                return placeholderFragment;
             }
 
             @Override
@@ -60,24 +65,32 @@ public class Welcome extends AppCompatActivity {
     public static class PlaceholderFragment extends Fragment {
         private static final String ARG_SECTION_NUMBER = "position";
 
-        public PlaceholderFragment() {
-        }
+        static PlaceholderFragment[] fragments;
 
-        public static PlaceholderFragment newInstance(int sectionNumber) {
-            PlaceholderFragment fragment = new PlaceholderFragment();
-            Bundle args = new Bundle();
-            args.putInt(ARG_SECTION_NUMBER, sectionNumber);
-            fragment.setArguments(args);
-            return fragment;
+        int position;
+        void setPosition(int p){
+            this.position = p;
         }
+//        public PlaceholderFragment() {
+//            fragments = new PlaceholderFragment[3];
+//        }
+//
+//        public static PlaceholderFragment getInstance(int sectionNumber) {
+////            PlaceholderFragment fragment = new PlaceholderFragment();
+////            Toast.makeText(getBaseContext(),position+"",Toast.LENGTH_SHORT).show();
+//            Bundle args = new Bundle();
+//            args.putInt(ARG_SECTION_NUMBER, sectionNumber);
+//            fragments[sectionNumber].setArguments(args);
+//            return fragments[sectionNumber];
+//        }
 
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
             View rootView = inflater.inflate(R.layout.fragment_welcome, container, false);
             ImageView imageView = (ImageView) rootView.findViewById(R.id.imageViewWelcome);
-            int position = getArguments().getInt(ARG_SECTION_NUMBER);
-            switch (position){
+//            int position = getArguments().getInt(ARG_SECTION_NUMBER);
+            switch (position+1){
                 case 1:
                     imageView.setImageResource(R.drawable.welcome1);
                     imageView.setBackgroundColor(getResources().getColor(R.color.violet));
@@ -95,7 +108,6 @@ public class Welcome extends AppCompatActivity {
                     break;
             }
 
-            Toast.makeText(getContext(),position+"",Toast.LENGTH_SHORT).show();
             ((TextView) rootView.findViewById(R.id.WelcomeTextSmall)).setText(textSmall.get(position));
             ((TextView) rootView.findViewById(R.id.WelcomeTextLarge)).setText(textLarge);
 
@@ -115,9 +127,9 @@ public class Welcome extends AppCompatActivity {
     }
 
     private void end(){
-        SharedPreferences settings = getSharedPreferences("prefs", 0);
+        SharedPreferences settings = getSharedPreferences(Utils.myPrefs, 0);
         SharedPreferences.Editor editor = settings.edit();
-        editor.putBoolean("firstRun", false);
+        editor.putBoolean(Utils.firstRun, false);
         editor.apply();
     }
 }

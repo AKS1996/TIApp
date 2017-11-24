@@ -19,7 +19,6 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextPreStory"
         android:layout_width="match_parent"
         android:padding="16dp"
         android:layout_height="wrap_content"

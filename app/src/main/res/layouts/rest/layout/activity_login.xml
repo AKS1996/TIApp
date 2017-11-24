@@ -74,7 +74,6 @@
             android:text="Sign In" />
 
         <Button
-            android:id="@+id/sign_in_fb"
             android:layout_width="match_parent"
             android:textAllCaps="false"
             android:layout_height="wrap_content"
@@ -113,7 +112,6 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/textViewLoginSignup"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Sign Up"

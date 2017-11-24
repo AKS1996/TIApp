@@ -2,6 +2,8 @@ package com.topcoder.timobile.storyContent;
 
 import android.app.AlertDialog;
 import android.content.Context;
+import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,6 +15,7 @@ import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.VideoView;
 
 import com.topcoder.timobile.R;
 import com.topcoder.timobile.Utils;
@@ -58,7 +61,6 @@ public class StoryContentFragment extends AbstractStep {
 
                 }
             });
-
 
         }catch(JSONException j){
             j.printStackTrace();

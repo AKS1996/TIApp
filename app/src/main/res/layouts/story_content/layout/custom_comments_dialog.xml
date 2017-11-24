@@ -60,7 +60,6 @@
         android:layout_marginBottom="8dp"
         android:background="#000"
         android:gravity="center_horizontal"
-        android:id="@+id/lin353"
         android:layout_alignParentBottom="true">
 
         <EditText

@@ -29,7 +29,6 @@
                 android:layout_gravity="right"/>
 
             <ImageView
-                android:id="@+id/imageViewWelcome1"
                 android:contentDescription="@string/cd1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -53,7 +52,6 @@
                 android:layout_gravity="right"/>
 
             <ImageView
-                android:id="@+id/imageViewWelcome2"
                 android:contentDescription="@string/cd1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -77,7 +75,6 @@
                 android:layout_gravity="right"/>
 
             <ImageView
-                android:id="@+id/imageViewWelcome3"
                 android:contentDescription="@string/cd1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -121,6 +118,7 @@
             android:id="@+id/WelcomeTextLarge"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:maxLines="3"
             android:textAlignment="center"
             android:textColor="@color/d_grey"
             android:paddingBottom="@dimen/double_activity_margin"

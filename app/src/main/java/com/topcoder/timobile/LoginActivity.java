@@ -23,9 +23,9 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (email.getText().toString().equals(getResources().getString(R.string.login_email)) && password.getText().toString().equals(getResources().getString(R.string.login_password))){
-                    SharedPreferences settings = getSharedPreferences("prefs", 0);
+                    SharedPreferences settings = getSharedPreferences(Utils.myPrefs, 0);
                     SharedPreferences.Editor editor = settings.edit();
-                    editor.putBoolean("newUser", false);
+                    editor.putBoolean(Utils.newUser, false);
                     editor.apply();
                     end();
                 }

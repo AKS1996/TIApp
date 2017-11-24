@@ -37,7 +37,7 @@ public class CameraActivity extends Activity {
         mCamera.setDisplayOrientation(90);
         mCameraPreview = new CameraPreview(this, mCamera);
         FrameLayout preview = (FrameLayout) findViewById(R.id.camera_preview);
-        preview.addView(mCameraPreview);
+//        preview.addView(mCameraPreview);
 
         Button captureButton = (Button) findViewById(R.id.capture_image);
         captureButton.setOnClickListener(new View.OnClickListener() {
