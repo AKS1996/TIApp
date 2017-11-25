@@ -14,12 +14,15 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
 import android.widget.ExpandableListView;
+import android.widget.Toast;
+
 import com.topcoder.timobile.R;
 import com.topcoder.timobile.Utils;
 import com.topcoder.timobile.points.Points;
@@ -117,6 +120,7 @@ public class Help extends AppCompatActivity implements NavigationView.OnNavigati
         ExpandableListView expListView;
         List<String> listDataHeader;
         HashMap<String, List<String>> listDataChild;
+        private int lastExpandedPosition = -1;
 
         public PlaceholderFragment() {
         }
@@ -138,6 +142,18 @@ public class Help extends AppCompatActivity implements NavigationView.OnNavigati
             prepareListData(getArguments().getInt(ARG_SECTION_NUMBER));
             listAdapter = new ExpandableListAdapter(getContext(), listDataHeader, listDataChild);
             expListView.setAdapter(listAdapter);
+            expListView.setOnGroupExpandListener(new ExpandableListView.OnGroupExpandListener() {
+                @Override
+                public void onGroupExpand(int i) {
+
+//                    Log.d("djdjd",i+"");
+                    if(lastExpandedPosition!=i && lastExpandedPosition !=-1 ){
+                        expListView.collapseGroup(lastExpandedPosition);
+
+                    }
+                    lastExpandedPosition=i;
+                }
+            });
 
             return rootView;
         }

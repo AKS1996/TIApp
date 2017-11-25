@@ -3,10 +3,12 @@ package com.topcoder.timobile.help;
 import com.topcoder.timobile.R;
 import android.content.Context;
 import android.graphics.Typeface;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 import java.util.HashMap;
 import java.util.List;
@@ -88,8 +90,18 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
 
         TextView lblListHeader = (TextView) convertView
                 .findViewById(R.id.lblListHeader);
+        ImageView arrow =(ImageView)convertView.findViewById(R.id.list_item_arrow);
+
+
         lblListHeader.setTypeface(null, Typeface.BOLD);
         lblListHeader.setText(headerTitle);
+
+        if (isExpanded) {
+            Log.d("fikjf","dff");
+            arrow.setImageResource(R.drawable.ic_expand_more_black_24dp);
+        } else {
+           arrow.setImageResource(R.drawable.ic_chevron_left_black_24dp);
+        }
 
         return convertView;
     }

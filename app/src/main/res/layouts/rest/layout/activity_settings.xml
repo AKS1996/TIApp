@@ -62,6 +62,7 @@
             android:layout_marginBottom="@dimen/activity_vertical_margin"
             android:paddingBottom="@dimen/double_activity_margin"
             android:text="Change Your Image"
+            android:id="@+id/change_image"
             android:textColor="@color/white"
             android:textSize="16sp"/>
     </LinearLayout>
