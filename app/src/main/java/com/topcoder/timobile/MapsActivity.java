@@ -27,6 +27,9 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 public class MapsActivity extends FragmentActivity implements com.google.android.gms.location.LocationListener,
         OnMapReadyCallback, GoogleApiClient.ConnectionCallbacks,
         GoogleApiClient.OnConnectionFailedListener {
@@ -41,7 +44,7 @@ public class MapsActivity extends FragmentActivity implements com.google.android
     Marker mCurrLocationMarker1;
     Marker mCurrLocationMarker2;
     LocationRequest mLocationRequest;
-    TextView textView;
+    private TextView matter,es_text,card_view_title,chapter_info,card_info;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,10 +54,18 @@ public class MapsActivity extends FragmentActivity implements com.google.android
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
-        textView=(TextView)findViewById(R.id.maps_text);
+        setViews();
 
 
 
+    }
+
+    private void setViews() {
+        matter=(TextView)findViewById(R.id.matter);
+        es_text=(TextView)findViewById(R.id.es);
+        card_info=(TextView)findViewById(R.id.CardInfo);
+        chapter_info=(TextView)findViewById(R.id.ChapterInfo);
+        card_view_title=(TextView)findViewById(R.id.card_view_title);
     }
 
 
@@ -116,7 +127,7 @@ public class MapsActivity extends FragmentActivity implements com.google.android
         markerOptions.icon(icon);
         markerOptions.title("Current Position");
         mCurrLocationMarker = mMap.addMarker(markerOptions);
-        mCurrLocationMarker.setTag(0);
+        mCurrLocationMarker.setTag(3);
         markerOptions.position(latLng1);
         mCurrLocationMarker1 = mMap.addMarker(markerOptions);
         mCurrLocationMarker1.setTag(1);
@@ -133,12 +144,33 @@ public class MapsActivity extends FragmentActivity implements com.google.android
             @Override
             public boolean onMarkerClick(Marker marker) {
 
-                textView.setText(marker.getTitle()+"  "+marker.getTag());
+                setCardView((int)marker.getTag());
+
                 return false;
             }
         });
 
 
+    }
+
+    private void setCardView(int pos) {
+
+        try {
+            JSONObject obj = new JSONObject(Utils.loadJSONFromAsset(this, "stories.json"));
+                JSONObject storySelected = obj.getJSONObject(pos + "");
+                String title = storySelected.getString("title");
+                String subtitle = storySelected.getString("subtitle");
+                int cards = storySelected.getInt("cards");
+                int chapters = storySelected.getJSONArray("chapters").length();
+                card_view_title.setText(title);
+                matter.setText(" the title bar from above:");
+                card_info.setText(cards+"Cards");
+                chapter_info.setText(chapters+"chapters");
+                es_text.setText(subtitle);
+
+        } catch (JSONException j) {
+            j.printStackTrace();
+        }
     }
 
     @Override

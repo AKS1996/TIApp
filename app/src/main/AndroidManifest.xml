@@ -41,6 +41,13 @@
             android:theme="@style/customTheme.StatusBarOverlay" />
         <activity android:name=".story.Story">
 
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
         </activity>
         <activity android:name=".Welcome" />
         <!--
@@ -58,11 +65,6 @@
         <activity
             android:name=".MapsActivity">
 
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 

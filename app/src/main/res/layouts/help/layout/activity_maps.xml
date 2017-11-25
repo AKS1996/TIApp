@@ -3,7 +3,8 @@
 <android.support.design.widget.CoordinatorLayout android:layout_height="match_parent"
     android:layout_width="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools">
 <fragment xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:map="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -14,17 +15,13 @@
     tools:context=".MapsActivity" />
 
 
-    <android.support.v7.widget.CardView
-        android:layout_width="match_parent"
+    <LinearLayout
         android:layout_margin="10dp"
-        app:cardCornerRadius="5dp"
-        android:layout_gravity="bottom|center_horizontal"
-        android:layout_height="200dp">
+    android:layout_width="match_parent"
+        android:layout_gravity="bottom"
+    android:layout_height="wrap_content">
+    <include layout="@layout/custom_card_adapter"
+    />
+    </LinearLayout>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="dhdh"
-            android:id="@+id/maps_text"/>
-    </android.support.v7.widget.CardView>
 </android.support.design.widget.CoordinatorLayout>
