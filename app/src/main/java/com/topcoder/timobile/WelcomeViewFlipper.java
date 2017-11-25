@@ -1,9 +1,11 @@
 package com.topcoder.timobile;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.MotionEvent;
+import android.view.View;
 import android.widget.TextView;
 import android.widget.ViewFlipper;
 
@@ -13,7 +15,7 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
-public class WelcomeViewFlipper extends Activity {
+public class WelcomeViewFlipper extends Activity{
     private ViewFlipper viewFlipper;
     private float lastX;
     private int currentWindow;
@@ -96,6 +98,14 @@ public class WelcomeViewFlipper extends Activity {
             case 2:Utils.darkenStatusBar(this, R.color.green);break;
             case 3:Utils.darkenStatusBar(this, R.color.orange);break;
         }
+    }
+
+    /**
+     * TextView Click Listener associated with "Skip this!"
+     * in activity Welcome
+     */
+    public void SkipActionClickListener(View view) {
+        startActivity(new Intent(getBaseContext(),DotClass.class));
     }
 
     private void end() {

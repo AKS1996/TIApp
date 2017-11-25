@@ -25,6 +25,7 @@
                 android:layout_height="wrap_content"
                 android:text="Skip This!"
                 android:padding="@dimen/appbar_padding_top"
+                android:onClick="SkipActionClickListener"
                 android:textColor="@color/white"
                 android:layout_gravity="right"/>
 
@@ -47,6 +48,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Skip This!"
+                android:onClick="SkipActionClickListener"
                 android:padding="@dimen/appbar_padding_top"
                 android:textColor="@color/white"
                 android:layout_gravity="right"/>
@@ -69,6 +71,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="SkipActionClickListener"
                 android:text="Skip This!"
                 android:padding="@dimen/appbar_padding_top"
                 android:textColor="@color/white"
