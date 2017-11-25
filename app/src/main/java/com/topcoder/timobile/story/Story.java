@@ -16,6 +16,7 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.topcoder.timobile.LoginActivity;
+import com.topcoder.timobile.MapsActivity;
 import com.topcoder.timobile.R;
 import com.topcoder.timobile.Utils;
 import com.topcoder.timobile.WelcomeViewFlipper;
@@ -43,7 +44,7 @@ public class Story extends AppCompatActivity implements NavigationView.OnNavigat
         setSupportActionBar(myToolbar);
 
         // TODO Due to lack of time, couldn't add its interface
-//        startActivity(new Intent(this, StoryContent.class));
+        startActivity(new Intent(this, MapsActivity.class));
 
         SharedPreferences settings = getSharedPreferences(Utils.myPrefs, 0);
         if ( settings.getBoolean(Utils.newUser, true)) {

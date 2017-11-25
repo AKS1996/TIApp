@@ -71,6 +71,8 @@ public class Welcome extends AppCompatActivity {
         void setPosition(int p){
             this.position = p;
         }
+
+        // TODO Resolve me plz
 //        public PlaceholderFragment() {
 //            fragments = new PlaceholderFragment[3];
 //        }

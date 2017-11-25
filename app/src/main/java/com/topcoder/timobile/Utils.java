@@ -18,29 +18,41 @@ public class Utils {
 
     // The public static function which can be called from other classes
     public static void darkenStatusBar(Activity activity, int color) {
-
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-
-            activity.getWindow().setStatusBarColor(
-                    darkenColor(
-                            ContextCompat.getColor(activity, color)));
-        }
-
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP)
+            activity.getWindow().setStatusBarColor(darkenColor(ContextCompat.getColor(activity, color)));
     }
 
     public static void logout(Context context){
         Toast.makeText(context,"Logged Out",Toast.LENGTH_SHORT).show();
+        setPreferences(context,Utils.newUser,true);
+    }
+
+    /**
+     * Generic Function to Store shared preferences
+     * @param context   Calling Activity name
+     * @param name      Preference Name to be stored
+     * @param value     Value of the Preference
+     */
+    public static void setPreferences(Context context, String name, Object value){
+        String stringValue = String.valueOf(value);
         SharedPreferences settings = context.getSharedPreferences(Utils.myPrefs, 0);
         SharedPreferences.Editor editor = settings.edit();
-        editor.putBoolean(Utils.newUser, true);
+        if (value.getClass() == Boolean.class)
+            editor.putBoolean(name, Boolean.getBoolean(stringValue));
+        else if (value.getClass() == Integer.class)
+            editor.putInt(name, Integer.getInteger(stringValue));
+        else
+            editor.putString(name,stringValue);
         editor.apply();
     }
 
-    // Code to darken the color supplied (mostly color of toolbar)
+    /**
+     * Code to darken the color supplied (mostly color of toolbar)
+     * Use hsv[2] *= 0.8f to darken status bar a bit
+     */
     private static int darkenColor(int color) {
         float[] hsv = new float[3];
         Color.colorToHSV(color, hsv);
-//        hsv[2] *= 0.8f; // Darkens status bar a bit
         return Color.HSVToColor(hsv);
     }
 
