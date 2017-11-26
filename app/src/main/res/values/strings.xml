@@ -22,4 +22,9 @@
     <string name="image_description">This is an image</string>
 
     <string name="story_position">story_position</string>
+
+    <string name="gallery">"Gallery"</string>
+    <string name="camera">"Camera"</string>
+    <string name="dialog_title">"Photo"</string>
+    <string name="cancel">"Cance"</string>
 </resources>
