@@ -32,7 +32,7 @@
             android:textColor="#E5D40B"
             android:textAllCaps="false"
             android:layout_gravity="center"
-            android:text="Please enter correct email or password"/>
+            android:text="Dummy Login:hello@world.com, Password:password"/>
 
         <EditText
             android:id="@+id/editTextEmail"
@@ -116,6 +116,7 @@
             android:layout_height="wrap_content"
             android:text="Sign Up"
             android:textColor="@color/navyBlue"
+            android:layout_marginLeft="@dimen/appbar_padding_top"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"

@@ -102,10 +102,11 @@ public class WelcomeViewFlipper extends Activity{
 
     /**
      * TextView Click Listener associated with "Skip this!"
-     * in activity Welcome
+     * in activity Welcome. Ends current activity, sets firstUser as false
      */
     public void SkipActionClickListener(View view) {
         startActivity(new Intent(getBaseContext(),DotClass.class));
+        end();
     }
 
     private void end() {
@@ -113,7 +114,6 @@ public class WelcomeViewFlipper extends Activity{
         SharedPreferences.Editor editor = settings.edit();
         editor.putBoolean(Utils.firstRun, false);
         editor.apply();
-
         finish();
     }
 }

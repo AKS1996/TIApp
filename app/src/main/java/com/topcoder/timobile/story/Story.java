@@ -44,16 +44,17 @@ public class Story extends AppCompatActivity implements NavigationView.OnNavigat
         Toolbar myToolbar = (Toolbar) findViewById(R.id.toolbarStory);
         setSupportActionBar(myToolbar);
 
-        // TODO Due to lack of time, couldn't add its interface
-        startActivity(new Intent(this, MapsActivity.class));
-
-        SharedPreferences settings = getSharedPreferences(Utils.myPrefs, 0);
-        if ( settings.getBoolean(Utils.newUser, true)) {
-            startActivity(new Intent(this, LoginActivity.class));
-        }
-        if (settings.getBoolean(Utils.firstRun, true)) {
-            startActivity(new Intent(this, WelcomeViewFlipper.class));
-        }
+        startActivity(new Intent(this, WelcomeViewFlipper.class));
+//        // TODO Due to lack of time, couldn't add its interface
+//        startActivity(new Intent(this, MapsActivity.class));
+//
+//        SharedPreferences settings = getSharedPreferences(Utils.myPrefs, 0);
+//        if ( settings.getBoolean(Utils.newUser, true)) {
+//            startActivity(new Intent(this, LoginActivity.class));
+//        }
+//        if (settings.getBoolean(Utils.firstRun, true)) {
+//            startActivity(new Intent(this, WelcomeViewFlipper.class));
+//        }
 
 
         // comments and card adapters
