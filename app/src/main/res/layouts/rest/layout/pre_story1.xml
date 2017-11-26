@@ -12,7 +12,7 @@
         android:textColor="@color/white"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary"
+        android:background="@color/violet"
         android:textStyle="bold"
         android:layout_gravity="center_vertical|center_horizontal"
         android:padding="@dimen/appbar_padding_top"

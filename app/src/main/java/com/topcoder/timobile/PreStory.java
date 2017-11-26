@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.support.v7.widget.Toolbar;
 import android.widget.ArrayAdapter;
+import android.widget.CheckedTextView;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -46,8 +47,9 @@ public class PreStory extends AbstractStep {
 
             ListView listView = (ListView) v.findViewById(R.id.listViewPreStory);
             List<String> listContents = loadContents(getContext(),i);
-            adapter = new ArrayAdapter<>(v.getContext(),android.R.layout.simple_list_item_multiple_choice, listContents);
+            adapter = new ArrayAdapter<>(v.getContext(),R.layout.pre_story_row, listContents);
             listView.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
+            ((CheckedTextView) v.findViewById(R.id.checkboxPreStory)).setCheckMarkDrawable(R.drawable.custom_tick_pre_story);
             listView.setAdapter(adapter);
         }
         return v;

@@ -10,7 +10,7 @@
         android:textAlignment="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary"
+        android:background="@color/violet"
         android:textSize="@dimen/double_activity_margin"
         android:textColor="@color/white"
         android:textStyle="bold"
