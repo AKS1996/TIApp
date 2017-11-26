@@ -1,13 +1,10 @@
 package com.topcoder.timobile;
 
-
 import android.os.Bundle;
-
 import com.github.fcannizzaro.materialstepper.AbstractStep;
 import com.github.fcannizzaro.materialstepper.style.DotStepper;
 
 public class DotClass extends DotStepper {
-    // TODO add material stepper colors
 
     private int i = 1;
 
@@ -16,7 +13,8 @@ public class DotClass extends DotStepper {
 
         setErrorTimeout(1500);
         setTitle("Thoroughbred Insider");
-        setDarkPrimaryColor(R.color.white);
+        setDarkPrimaryColor(getResources().getColor(R.color.violet));
+        setDarkPrimaryColor(getResources().getColor(R.color.violet));
 
         addStep(createFragment(new PreStory()));
         addStep(createFragment(new PreStory()));
@@ -30,6 +28,14 @@ public class DotClass extends DotStepper {
         b.putInt("position", i++);
         fragment.setArguments(b);
         return fragment;
+    }
+
+    /**
+     * Finish this activity and revert to Story Activity
+     */
+    @Override
+    public void onComplete(){
+        finish();
     }
 
 }
