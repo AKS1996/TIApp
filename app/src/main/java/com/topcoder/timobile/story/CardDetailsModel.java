@@ -1,15 +1,16 @@
 package com.topcoder.timobile.story;
 
-class CardDetailsModel {
+public class CardDetailsModel {
     private String es,matter,cardviewtitle;
-    private int cards, chapters;
+    private int cards, chapters,Id;
 
-    CardDetailsModel(String es,String cardviewtitle,int cards, int chapters, String matter){
+    public CardDetailsModel(String es,String cardviewtitle,int cards, int chapters, String matter,int id){
         this.es=es;
         this.cardviewtitle=cardviewtitle;
         this.matter=matter;
         this.cards = cards;
         this.chapters = chapters;
+        this.Id=id;
     }
 
     String getEs(){
@@ -26,6 +27,9 @@ class CardDetailsModel {
     }
     int getChapterCount(){
         return this.chapters;
+    }
+    public int getId(){
+        return this.Id;
     }
     
 }

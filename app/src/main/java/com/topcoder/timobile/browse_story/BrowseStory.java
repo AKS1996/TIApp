@@ -19,11 +19,16 @@ public class BrowseStory extends AppCompatActivity implements View.OnClickListen
     private LinearLayout storyProgress;
     private Boolean viewstate=false;
 
+    private  int currentItemPos;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_browse_story);
+
+        Intent intent=getIntent();
+        currentItemPos=intent.getIntExtra(getResources().getString(R.string.story_position),0);
 
         storyProgress=(LinearLayout) findViewById(R.id.progressBarLayout);
         threeElementLayout =(LinearLayout) findViewById(R.id.threeElementLayout);
@@ -116,14 +121,16 @@ public class BrowseStory extends AppCompatActivity implements View.OnClickListen
                 "Favourite", Context.MODE_PRIVATE);
         SharedPreferences.Editor aSharedPreferencesEdit = aSharedPreferences
                 .edit();
-        aSharedPreferencesEdit.putBoolean("State", isFavourite);
+        aSharedPreferencesEdit.putBoolean("State"+currentItemPos, isFavourite);
+        aSharedPreferencesEdit.commit();
         aSharedPreferencesEdit.apply();
+
     }
 
     private boolean readState() {
         SharedPreferences aSharedPreferences = this.getSharedPreferences(
                 "Favourite", Context.MODE_PRIVATE);
-        return aSharedPreferences.getBoolean("State", false);
+        return aSharedPreferences.getBoolean("State"+currentItemPos, false);
     }
 
     private boolean readRewardState() {
