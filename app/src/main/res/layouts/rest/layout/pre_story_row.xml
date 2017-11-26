@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copied from actual Google SDK, API Level 1-->
 <CheckedTextView xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/checkboxPreStory"
     android:layout_width="match_parent"
     android:layout_height="?android:attr/listPreferredItemHeightSmall"
     android:textAppearance="?android:attr/textAppearanceListItemSmall"
     android:gravity="center_vertical"
-    android:checked="false"
-    android:checkMark="@drawable/custom_tick_pre_story"
-    android:paddingStart="?android:attr/listPreferredItemPaddingStart"
-    android:paddingEnd="?android:attr/listPreferredItemPaddingEnd" />
+    android:checked="false" />
 

@@ -15,6 +15,7 @@ public class Utils {
     public static String myPrefs = "preferences";
     public static String newUser = "new_user";
     public static String firstRun = "first_run";
+    public static String TAG = "###";
 
     // The public static function which can be called from other classes
     public static void darkenStatusBar(Activity activity, int color) {

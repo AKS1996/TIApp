@@ -2,11 +2,14 @@ package com.topcoder.timobile;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.support.v7.widget.Toolbar;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Checkable;
 import android.widget.CheckedTextView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -44,13 +47,19 @@ public class PreStory extends AbstractStep {
             v = inflater.inflate(R.layout.pre_story2, container, false);
             ((TextView) v.findViewById(R.id.toolbarPreStory2)).setText(titles[i-1]);
 
-
             ListView listView = (ListView) v.findViewById(R.id.listViewPreStory);
             List<String> listContents = loadContents(getContext(),i);
             adapter = new ArrayAdapter<>(v.getContext(),R.layout.pre_story_row, listContents);
             listView.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
-            ((CheckedTextView) v.findViewById(R.id.checkboxPreStory)).setCheckMarkDrawable(R.drawable.custom_tick_pre_story);
             listView.setAdapter(adapter);
+            listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                    ((CheckedTextView) view.findViewById(R.id.checkboxPreStory)).setTextColor(getResources().getColor(R.color.navyBlue));
+                    ((CheckedTextView) view.findViewById(R.id.checkboxPreStory)).setCheckMarkDrawable(R.drawable.custom_tick_pre_story);
+                }
+            });
+
         }
         return v;
     }
@@ -60,11 +69,10 @@ public class PreStory extends AbstractStep {
         try{
             JSONObject jsonObject = new JSONObject(Utils.loadJSONFromAsset(context,"prestory.json"));
             JSONArray jsonArray = jsonObject.getJSONArray(position+"");
-
             for (int i = 0; i < jsonArray.length(); i++)
                 listContents.add(jsonArray.getString(i));
-
         }catch (JSONException j){
+            Log.e(Utils.TAG, j.getMessage());
         }
 
         return listContents;
