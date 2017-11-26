@@ -12,6 +12,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
+
+import com.topcoder.timobile.BookMarks;
 import com.topcoder.timobile.R;
 import com.topcoder.timobile.Utils;
 import com.topcoder.timobile.help.Help;
@@ -90,6 +92,7 @@ public class Rewards extends AppCompatActivity implements NavigationView.OnNavig
             case R.id.nav_story_selection:startActivity(new Intent(this, Story.class));
                 break;
             case R.id.nav_bookmarks:
+                startActivity(new Intent(this, BookMarks.class));
                 break;
             case R.id.nav_help:startActivity(new Intent(this, Help.class));
                 break;

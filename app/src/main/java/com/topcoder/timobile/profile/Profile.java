@@ -21,6 +21,7 @@ import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.TableLayout;
 
+import com.topcoder.timobile.BookMarks;
 import com.topcoder.timobile.R;
 import com.topcoder.timobile.Settings;
 import com.topcoder.timobile.Utils;
@@ -103,6 +104,7 @@ public class Profile extends AppCompatActivity implements NavigationView.OnNavig
             case R.id.nav_story_selection:startActivity(new Intent(this, Story.class));
                 break;
             case R.id.nav_bookmarks:
+                startActivity(new Intent(this, BookMarks.class));
                 break;
             case R.id.nav_help:startActivity(new Intent(this, Help.class));
                 break;

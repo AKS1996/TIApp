@@ -23,6 +23,7 @@ import android.view.ViewGroup;
 import android.widget.ExpandableListView;
 import android.widget.Toast;
 
+import com.topcoder.timobile.BookMarks;
 import com.topcoder.timobile.R;
 import com.topcoder.timobile.Utils;
 import com.topcoder.timobile.points.Points;
@@ -94,6 +95,7 @@ public class Help extends AppCompatActivity implements NavigationView.OnNavigati
             case R.id.nav_story_selection:startActivity(new Intent(this, Story.class));
                 break;
             case R.id.nav_bookmarks:
+                startActivity(new Intent(this, BookMarks.class));
                 break;
             case R.id.nav_help:startActivity(new Intent(this, Help.class));
                 break;

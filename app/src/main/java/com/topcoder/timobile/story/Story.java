@@ -15,6 +15,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
+import com.topcoder.timobile.BookMarks;
 import com.topcoder.timobile.LoginActivity;
 import com.topcoder.timobile.R;
 import com.topcoder.timobile.Utils;
@@ -55,7 +56,7 @@ public class Story extends AppCompatActivity implements NavigationView.OnNavigat
 
 
         // comments and card adapters
-        ListView cardslistView = (ListView) findViewById(R.id.card_list_view);
+        final ListView cardslistView = (ListView) findViewById(R.id.card_list_view);
         CustomCardAdapter customCardAdapter = new CustomCardAdapter(this, R.layout.custom_card_adapter,
                 new ArrayList<CardDetailsModel>());
 
@@ -67,7 +68,8 @@ public class Story extends AppCompatActivity implements NavigationView.OnNavigat
                 String subtitle = storySelected.getString("subtitle");
                 int cards = storySelected.getInt("cards");
                 int chapters = storySelected.getJSONArray("chapters").length();
-                customCardAdapter.add(new CardDetailsModel(subtitle, title, cards, chapters, "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce luctus congue mauris"));
+                customCardAdapter.add(new CardDetailsModel(subtitle, title, cards, chapters,
+                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce luctus congue mauris",i));
             }
         } catch (JSONException j) {
             j.printStackTrace();
@@ -77,8 +79,10 @@ public class Story extends AppCompatActivity implements NavigationView.OnNavigat
         cardslistView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                CardDetailsModel cardDetailsModel=(CardDetailsModel) cardslistView.getItemAtPosition(position);
                 Intent intent = new Intent(getBaseContext(), BrowseStory.class);
-                intent.putExtra(getResources().getString(R.string.story_position), position);
+                intent.putExtra(getResources().getString(R.string.story_position),cardDetailsModel.getId());
                 startActivity(intent);
             }
         });
@@ -110,6 +114,7 @@ public class Story extends AppCompatActivity implements NavigationView.OnNavigat
                 startActivity(new Intent(this, Story.class));
                 break;
             case R.id.nav_bookmarks:
+                startActivity(new Intent(this, BookMarks.class));
                 break;
             case R.id.nav_help:
                 startActivity(new Intent(this, Help.class));
