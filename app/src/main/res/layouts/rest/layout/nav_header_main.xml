@@ -14,13 +14,11 @@
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
     <de.hdodenhof.circleimageview.CircleImageView
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_margin="6dp"
-        android:paddingTop="16dp"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/cloud"
-        app:layout_constraintBottom_toTopOf="@+id/textViewNameNav"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="96dp"
+        android:id="@+id/ImageViewNavHeader"
+        android:layout_height="96dp"
+        android:src="@drawable/laughing_guy_face"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -31,23 +29,18 @@
         android:id="@+id/textViewNameNav"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:text="Android Studio"
+        android:text="David Williams"
+        android:paddingTop="@dimen/appbar_padding_top"
+        app:layout_constraintTop_toBottomOf="@id/ImageViewNavHeader"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:text="android.studio@android.com"
-        app:layout_constraintBottom_toTopOf="@+id/textViewNameNav"
+        android:text="david.williams@gmail.com"
+        app:layout_constraintTop_toBottomOf="@+id/textViewNameNav"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -55,7 +48,6 @@
         android:id="@+id/cancelButton"
         android:layout_width="24dp"
         android:layout_height="24dp"
-        android:layout_marginTop="16dp"
         android:background="@drawable/ic_cancel_black_24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
