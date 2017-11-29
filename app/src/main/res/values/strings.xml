@@ -27,4 +27,9 @@
     <string name="camera">"Camera"</string>
     <string name="dialog_title">"Photo"</string>
     <string name="cancel">"Cance"</string>
+
+    <!-- PreStory Activity-->
+    <string name="title1">1. SET UP YOUR LOCATION</string>
+    <string name="title2">2. SELECT THE STATES</string>
+    <string name="title3">3. SELECT THE RACETRACKS</string>
 </resources>
