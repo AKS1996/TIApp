@@ -123,7 +123,7 @@ public class MapsActivity extends FragmentActivity implements com.google.android
         LatLng latLng2 = new LatLng(location.getLatitude()+.092, location.getLongitude());
         MarkerOptions markerOptions = new MarkerOptions();
         markerOptions.position(latLng);
-        BitmapDescriptor icon = BitmapDescriptorFactory.fromResource(R.drawable.custom_marker);
+        BitmapDescriptor icon = BitmapDescriptorFactory.fromResource(R.drawable.coin_small);
         markerOptions.icon(icon);
         markerOptions.title("Current Position");
         mCurrLocationMarker = mMap.addMarker(markerOptions);

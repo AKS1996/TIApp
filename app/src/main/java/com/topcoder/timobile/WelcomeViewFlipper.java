@@ -1,9 +1,11 @@
 package com.topcoder.timobile;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.MotionEvent;
+import android.view.View;
 import android.widget.TextView;
 import android.widget.ViewFlipper;
 
@@ -13,7 +15,7 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
-public class WelcomeViewFlipper extends Activity {
+public class WelcomeViewFlipper extends Activity{
     private ViewFlipper viewFlipper;
     private float lastX;
     private int currentWindow;
@@ -98,12 +100,20 @@ public class WelcomeViewFlipper extends Activity {
         }
     }
 
+    /**
+     * TextView Click Listener associated with "Skip this!"
+     * in activity Welcome. Ends current activity, sets firstUser as false
+     */
+    public void SkipActionClickListener(View view) {
+        startActivity(new Intent(getBaseContext(),DotClass.class));
+        end();
+    }
+
     private void end() {
         SharedPreferences settings = getSharedPreferences(Utils.myPrefs, 0);
         SharedPreferences.Editor editor = settings.edit();
         editor.putBoolean(Utils.firstRun, false);
         editor.apply();
-
         finish();
     }
 }

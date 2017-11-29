@@ -4,8 +4,8 @@
 
     <string name="pre_story_descrep">Let our App use your phone\'s GPS to automatically add stories if they are near your location</string>
 
-    <string name="login_email">Hello</string>
-    <string name="login_password">World</string>
+    <string name="login_email">hello@world.com</string>
+    <string name="login_password">password</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>

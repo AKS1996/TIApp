@@ -39,17 +39,16 @@
         android:background="?attr/colorPrimary">
 
         <de.hdodenhof.circleimageview.CircleImageView
-            android:layout_marginBottom="@dimen/activity_vertical_margin"
             android:layout_width="@dimen/circle_image"
             android:layout_height="@dimen/circle_image"
             android:layout_gravity="center"
-            android:src="@drawable/cloud"/>
+            android:src="@drawable/laughing_guy_face"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="@dimen/appbar_padding_top"
-            android:text="Akshay Sharma"
+            android:text="David Williams"
             android:gravity="center"
             android:textColor="@color/white"
             android:textSize="18sp"/>
@@ -60,7 +59,7 @@
             android:fontFamily="@font/open_sans_light"
             android:gravity="center"
             android:paddingBottom="@dimen/double_activity_margin"
-            android:text="akshay.sharma.mat16@itbhu.ac.in"
+            android:text="david.williams@gmail.com"
             android:textColor="@color/white"
             android:textSize="16sp" />
     </LinearLayout>

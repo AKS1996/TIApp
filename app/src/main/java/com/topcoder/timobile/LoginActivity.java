@@ -22,24 +22,23 @@ public class LoginActivity extends AppCompatActivity {
         findViewById(R.id.sign_in_email).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (email.getText().toString().equals(getResources().getString(R.string.login_email)) && password.getText().toString().equals(getResources().getString(R.string.login_password))){
-                    SharedPreferences settings = getSharedPreferences(Utils.myPrefs, 0);
-                    SharedPreferences.Editor editor = settings.edit();
-                    editor.putBoolean(Utils.newUser, false);
-                    editor.apply();
+                if (email.getText().toString().equals(getResources().getString(R.string.login_email)) && password.getText().toString().equals(getResources().getString(R.string.login_password)))
                     end();
-                }
                 else {
                     findViewById(R.id.textErrorLogin).setVisibility(View.VISIBLE);
                     findViewById(R.id.sign_in_email).setBackgroundColor(getResources().getColor(R.color.myRed));
                 }
-
             }
         });
     }
 
-    private void end(){
+    private void end() {
+        SharedPreferences settings = getSharedPreferences(Utils.myPrefs, 0);
+        SharedPreferences.Editor editor = settings.edit();
+        editor.putBoolean(Utils.newUser, false);
+        editor.apply();
+
+        startActivity(new Intent(this, DotClass.class));
         finish();
-        startActivityForResult(new Intent(this, DotClass.class),1);
     }
 }
