@@ -1,4 +1,45 @@
 {
-  "2":["Alabama","Alaska","Georgia","Florida","Connecticut","Delaware"],
-  "3":["CA-Barrets","CA-Alabama","CA-Florida","CA-Connecticut"]
+  "2": [
+    "Andhra Pradesh (Hyderabad)",
+    "Arunachal Pradesh (Itanagar)",
+    "Assam (Dispur)",
+    "Bihar (Patna)",
+    "Chhattisgarh (Raipur)",
+    "Goa (Panaji)",
+    "Gujarat (Gandhinagar)",
+    "Haryana (Chandigarh)",
+    "Himachal Pradesh (Shimla)",
+    "Jammu & Kashmir",
+    "Jharkhand (Ranchi)",
+    "Karnataka (Bangalore)",
+    "Kerala (Thiruvananthapuram)",
+    "Madhya Pradesh (Bhopal)",
+    "Maharashtra (Mumbai)",
+    "Manipur (Imphal)",
+    "Meghalaya (Shillong)",
+    "Mizoram (Aizawl)",
+    "Nagaland (Kohima)",
+    "Odisha (Bhubaneshwar)",
+    "Punjab (Chandigarh)",
+    "Rajasthan (Jaipur)",
+    "Sikkim (Gangtok)",
+    "Tamil Nadu (Chennai)",
+    "Telangana (Hyderabad)",
+    "Tripura (Agartala)",
+    "Uttarakhand (Dehradun)",
+    "Uttar Pradesh (Lucknow)",
+    "West Bengal (Kolkata)",
+    "Alabama",
+    "Alaska",
+    "Georgia",
+    "Florida",
+    "Connecticut",
+    "Delaware"
+  ],
+  "3": [
+    "CA-Barrets",
+    "CA-Alabama",
+    "CA-Florida",
+    "CA-Connecticut"
+  ]
 }

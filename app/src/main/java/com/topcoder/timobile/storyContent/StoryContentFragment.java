@@ -2,8 +2,6 @@ package com.topcoder.timobile.storyContent;
 
 import android.app.AlertDialog;
 import android.content.Context;
-import android.media.MediaPlayer;
-import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,11 +13,10 @@ import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.widget.VideoView;
 
-import com.topcoder.timobile.R;
-import com.topcoder.timobile.Utils;
 import com.github.fcannizzaro.materialstepper.AbstractStep;
+import com.topcoder.timobile.R;
+import com.topcoder.timobile.others.Utils;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -28,6 +25,7 @@ import java.util.ArrayList;
 
 public class StoryContentFragment extends AbstractStep {
 
+    CustomAdapter customAdapter;
     private int chapterPosition;
     private int storyNumber;
 
@@ -78,7 +76,6 @@ public class StoryContentFragment extends AbstractStep {
         return true;
     }
 
-
     @Override
     public void onStepVisible() {
     }
@@ -103,7 +100,6 @@ public class StoryContentFragment extends AbstractStep {
         return chapterPosition > 1;
     }
 
-    CustomAdapter customAdapter;
     private void showCommentsDialog(final Context context){
         final AlertDialog.Builder builder = new AlertDialog.Builder(context);
         View v =getLayoutInflater().inflate(R.layout.custom_comments_dialog, null);

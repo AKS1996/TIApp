@@ -18,6 +18,8 @@
     <TextView
         android:id="@+id/TitleStoryContent"
         android:layout_width="match_parent"
+        android:textSize="24sp"
+        android:textStyle="bold"
         android:layout_height="wrap_content"
         android:gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
@@ -30,6 +32,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/TitleStoryContent" />
@@ -40,6 +43,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
+        android:textSize="16sp"
         android:gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -51,7 +55,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
-        android:clickable="true"
+        android:layout_marginRight="8dp"
         android:tint="@color/white"
         app:backgroundTint="@color/navyBlue"
         app:layout_constraintBottom_toBottomOf="parent"

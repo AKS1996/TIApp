@@ -1,6 +1,7 @@
 package com.topcoder.timobile.profile;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -11,7 +12,6 @@ import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
@@ -21,13 +21,13 @@ import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.TableLayout;
 
-import com.topcoder.timobile.BookMarks;
 import com.topcoder.timobile.R;
-import com.topcoder.timobile.Settings;
-import com.topcoder.timobile.Utils;
 import com.topcoder.timobile.help.Help;
+import com.topcoder.timobile.others.Settings;
+import com.topcoder.timobile.others.Utils;
 import com.topcoder.timobile.points.Points;
 import com.topcoder.timobile.rewards.Rewards;
+import com.topcoder.timobile.story.BookMarks;
 import com.topcoder.timobile.story.Story;
 
 import org.json.JSONArray;
@@ -122,27 +122,6 @@ public class Profile extends AppCompatActivity implements NavigationView.OnNavig
         return true;
     }
 
-
-    public class SectionsPagerAdapter extends FragmentPagerAdapter {
-
-        public SectionsPagerAdapter(FragmentManager fm) {
-            super(fm);
-        }
-
-        @Override
-        public Fragment getItem(int position) {
-            // getItem is called to instantiate the fragment for the given page.
-            // Return a PlaceholderFragment (defined as a static inner class below).
-            return PlaceholderFragment.newInstance(position + 1);
-        }
-
-        @Override
-        public int getCount() {
-            // Show 2 total pages.
-            return 2;
-        }
-    }
-
     public static class PlaceholderFragment extends Fragment {
         private static final String ARG_SECTION_NUMBER = "section_number_profile_acitivity";
 
@@ -181,6 +160,26 @@ public class Profile extends AppCompatActivity implements NavigationView.OnNavig
             });
 
             return rootView;
+        }
+    }
+
+    public class SectionsPagerAdapter extends FragmentPagerAdapter {
+
+        public SectionsPagerAdapter(FragmentManager fm) {
+            super(fm);
+        }
+
+        @Override
+        public Fragment getItem(int position) {
+            // getItem is called to instantiate the fragment for the given page.
+            // Return a PlaceholderFragment (defined as a static inner class below).
+            return PlaceholderFragment.newInstance(position + 1);
+        }
+
+        @Override
+        public int getCount() {
+            // Show 2 total pages.
+            return 2;
         }
     }
 

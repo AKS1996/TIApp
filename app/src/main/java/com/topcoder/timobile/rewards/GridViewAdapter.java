@@ -10,7 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.topcoder.timobile.R;
-import com.topcoder.timobile.Utils;
+import com.topcoder.timobile.others.Utils;
 
 import org.json.JSONArray;
 import org.json.JSONException;

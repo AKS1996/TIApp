@@ -1,63 +1,61 @@
 {
   "1":{
-
-    "title": "Story Title Lorem Ipsum",
-    "subtitle": "Keenland Race Course",
+    "title": "Tying horse to cradle",
+    "subtitle": "Keen land Race Course",
     "cards":3,
     "chapters": [
       {
-        "titleChapter": "Chapter Title Lorem Ipsum",
+        "titleChapter": "Chapter Title Lorem Ipsum 1",
         "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce luctus congue mauris, in tristique lacus iaculis nec. Ut congue, lorem ut ultricies euismod, justo nisi eleifend enim, vel convallis ligula turpis volutpat lectus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse non ultrices nunc. Vestibulum maximus sodales tincidunt. Nam in arcu sit amet lorem semper vestibulum. Nunc euismod ex sed justo sodales, et vehicula nisi pretium."
       },
       {
-        "titleChapter": "Chapter Title Lorem Ipsum",
+        "titleChapter": "Chapter Title Lorem Ipsum 2",
         "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce luctus congue mauris, in tristique lacus iaculis nec. Ut congue, lorem ut ultricies euismod, justo nisi eleifend enim, vel convallis ligula turpis volutpat lectus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse non ultrices nunc. Vestibulum maximus sodales tincidunt. Nam in arcu sit amet lorem semper vestibulum. Nunc euismod ex sed justo sodales, et vehicula nisi pretium."
       },
       {
-        "titleChapter": "Chapter Title Lorem Ipsum",
+        "titleChapter": "Chapter Title Lorem Ipsum 3",
         "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce luctus congue mauris, in tristique lacus iaculis nec. Ut congue, lorem ut ultricies euismod, justo nisi eleifend enim, vel convallis ligula turpis volutpat lectus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse non ultrices nunc. Vestibulum maximus sodales tincidunt. Nam in arcu sit amet lorem semper vestibulum. Nunc euismod ex sed justo sodales, et vehicula nisi pretium."
       },
       {
-        "titleChapter": "Chapter Title Lorem Ipsum",
+        "titleChapter": "Chapter Title Lorem Ipsum 4",
         "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce luctus congue mauris, in tristique lacus iaculis nec. Ut congue, lorem ut ultricies euismod, justo nisi eleifend enim, vel convallis ligula turpis volutpat lectus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse non ultrices nunc. Vestibulum maximus sodales tincidunt. Nam in arcu sit amet lorem semper vestibulum. Nunc euismod ex sed justo sodales, et vehicula nisi pretium."
       }
     ]
   },
   "2":{
-
-    "title": "Story Title Dolor Amet",
-    "subtitle": "Keenland Race Course",
+    "title": "Effective horse riding",
+    "subtitle": "Alabama Race Course",
     "cards":2,
     "chapters": [
       {
-        "titleChapter": "Chapter Title Lorem Ipsum",
+        "titleChapter": "Chapter Title Lorem Ipsum 1",
         "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce luctus congue mauris, in tristique lacus iaculis nec. Ut congue, lorem ut ultricies euismod, justo nisi eleifend enim, vel convallis ligula turpis volutpat lectus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse non ultrices nunc. Vestibulum maximus sodales tincidunt. Nam in arcu sit amet lorem semper vestibulum. Nunc euismod ex sed justo sodales, et vehicula nisi pretium."
       },
       {
-        "titleChapter": "Chapter Title Lorem Ipsum",
+        "titleChapter": "Chapter Title Lorem Ipsum 2",
         "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce luctus congue mauris, in tristique lacus iaculis nec. Ut congue, lorem ut ultricies euismod, justo nisi eleifend enim, vel convallis ligula turpis volutpat lectus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse non ultrices nunc. Vestibulum maximus sodales tincidunt. Nam in arcu sit amet lorem semper vestibulum. Nunc euismod ex sed justo sodales, et vehicula nisi pretium."
       },
       {
-        "titleChapter": "Chapter Title Lorem Ipsum",
+        "titleChapter": "Chapter Title Lorem Ipsum 3",
         "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce luctus congue mauris, in tristique lacus iaculis nec. Ut congue, lorem ut ultricies euismod, justo nisi eleifend enim, vel convallis ligula turpis volutpat lectus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse non ultrices nunc. Vestibulum maximus sodales tincidunt. Nam in arcu sit amet lorem semper vestibulum. Nunc euismod ex sed justo sodales, et vehicula nisi pretium."
       }
     ]
   },
   "3":{
-    "title": "Story Title Dolor Amet",
-    "subtitle": "Keenland Race Course",
+    "title": "What is race stylization",
+    "subtitle": "Berkeley Race Course",
     "cards":4,
     "chapters": [
       {
-        "titleChapter": "Chapter Title Lorem Ipsum",
+        "titleChapter": "Chapter Title Lorem Ipsum 1",
         "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce luctus congue mauris, in tristique lacus iaculis nec. Ut congue, lorem ut ultricies euismod, justo nisi eleifend enim, vel convallis ligula turpis volutpat lectus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse non ultrices nunc. Vestibulum maximus sodales tincidunt. Nam in arcu sit amet lorem semper vestibulum. Nunc euismod ex sed justo sodales, et vehicula nisi pretium."
       },
       {
-        "titleChapter": "Chapter Title Lorem Ipsum",
+        "titleChapter": "Chapter Title Lorem Ipsum 2",
         "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce luctus congue mauris, in tristique lacus iaculis nec. Ut congue, lorem ut ultricies euismod, justo nisi eleifend enim, vel convallis ligula turpis volutpat lectus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse non ultrices nunc. Vestibulum maximus sodales tincidunt. Nam in arcu sit amet lorem semper vestibulum. Nunc euismod ex sed justo sodales, et vehicula nisi pretium."
       },
       {
-        "titleChapter": "Chapter Title Lorem Ipsum",
+        "titleChapter": "Chapter Title Lorem Ipsum 3",
         "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce luctus congue mauris, in tristique lacus iaculis nec. Ut congue, lorem ut ultricies euismod, justo nisi eleifend enim, vel convallis ligula turpis volutpat lectus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse non ultrices nunc. Vestibulum maximus sodales tincidunt. Nam in arcu sit amet lorem semper vestibulum. Nunc euismod ex sed justo sodales, et vehicula nisi pretium."
       }
     ]

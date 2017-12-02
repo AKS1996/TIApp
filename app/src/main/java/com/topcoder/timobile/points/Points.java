@@ -1,32 +1,30 @@
 package com.topcoder.timobile.points;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.TabLayout;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.GravityCompat;
+import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.view.ViewPager;
-import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-
 import android.widget.ListView;
 
-import com.topcoder.timobile.BookMarks;
 import com.topcoder.timobile.R;
-import com.topcoder.timobile.Utils;
 import com.topcoder.timobile.help.Help;
+import com.topcoder.timobile.others.Utils;
 import com.topcoder.timobile.profile.Profile;
 import com.topcoder.timobile.rewards.Rewards;
+import com.topcoder.timobile.story.BookMarks;
 import com.topcoder.timobile.story.Story;
 
 import org.json.JSONArray;

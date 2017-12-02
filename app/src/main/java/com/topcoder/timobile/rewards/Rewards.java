@@ -1,24 +1,24 @@
 package com.topcoder.timobile.rewards;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
 
-import com.topcoder.timobile.BookMarks;
 import com.topcoder.timobile.R;
-import com.topcoder.timobile.Utils;
 import com.topcoder.timobile.help.Help;
+import com.topcoder.timobile.others.Utils;
 import com.topcoder.timobile.points.Points;
 import com.topcoder.timobile.profile.Profile;
+import com.topcoder.timobile.story.BookMarks;
 import com.topcoder.timobile.story.Story;
 
 import org.json.JSONArray;
@@ -29,7 +29,6 @@ public class Rewards extends AppCompatActivity implements NavigationView.OnNavig
 
     // TODO Goto card shop button
     // TODO Use dividers in profile activity, remove custom border
-    // TODO Improve UI
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

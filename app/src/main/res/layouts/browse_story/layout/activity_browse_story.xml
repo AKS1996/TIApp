@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
+<LinearLayout
+    android:orientation="vertical"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -7,48 +8,67 @@
     android:layout_height="wrap_content"
     tools:context=".browse_story.BrowseStory">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:orientation="vertical"
-        android:layout_height="wrap_content">
-
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="248dp"
-        android:background="@drawable/running_horses"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/double_activity_margin"
+        android:background="@drawable/running_horses_tint"
         app:layout_constraintTop_toTopOf="parent"
-        android:id="@+id/toptview"
-        >
+        android:id="@+id/toptview">
 
         <ImageButton
             android:id="@+id/back_button"
             style="?android:attr/borderlessButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_chevron_left_black_24dp" />
+            app:srcCompat="@drawable/ic_chevron_left_white_24dp" />
 
         <ImageButton
             android:id="@+id/favorite_button"
             style="?android:attr/borderlessButtonStyle"
             android:layout_width="wrap_content"
+            app:srcCompat="@drawable/ic_star_border_black_24dp"
             android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
-            />
+            app:layout_constraintEnd_toEndOf="parent"/>
 
         <TextView
-            android:layout_width="267dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/appbar_padding_top"
+            android:layout_marginEnd="@dimen/triple_activity_margin"
             android:layout_marginRight="@dimen/appbar_padding_top"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="25sp"
+            android:id="@+id/titleTextBrowseStory"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.429" />
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/titleTextBrowseStory"
+            app:layout_constraintRight_toRightOf="parent"
+            android:padding="@dimen/double_activity_margin"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/ChapterInfoBrowseStory"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@mipmap/ic_book_white"
+                android:drawableLeft="@mipmap/ic_book_white"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:id="@+id/CardInfoBrowseStory"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:drawableStart="@mipmap/ic_card_white"
+                android:drawableLeft="@mipmap/ic_card_white"/>
+        </LinearLayout>
+
 
     </android.support.constraint.ConstraintLayout>
 
@@ -60,20 +80,26 @@
         android:background="@color/storybutton_background"
         android:id="@+id/tabSwitch"
         style="?android:attr/borderlessButtonStyle"
-        android:text="Track Story Progess"
+        android:text="@string/track_story_progress"
         android:textColor="@color/white"
         android:paddingLeft="@dimen/double_activity_margin"
+        android:paddingStart="@dimen/double_activity_margin"
+        android:paddingRight="@dimen/double_activity_margin"
+        android:paddingEnd="@dimen/double_activity_margin"
         android:textAllCaps="false"
         android:textAlignment="viewStart"
+        android:layout_gravity="start"
+        android:drawableRight="@drawable/ic_expand_more_black_24dp"
         android:drawableEnd="@drawable/ic_expand_more_black_24dp" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:orientation="vertical"
+        android:visibility="gone"
+        android:isScrollContainer="true"
         app:layout_constraintTop_toBottomOf="@id/tabSwitch"
         app:layout_constraintBottom_toTopOf="@id/threeElementLayout"
         android:id="@+id/progressBarLayout"
-        android:padding="@dimen/appbar_padding_top"
         android:background="@color/storybutton_background"
         android:layout_height="wrap_content">
 
@@ -83,6 +109,7 @@
             android:layout_height="5dp"
             android:indeterminate="false"
             android:background="@color/white"
+            android:layout_margin="@dimen/appbar_padding_top"
             android:progressTint="@color/progressBar"
             android:max="100"
             android:progress="40"/>
@@ -91,13 +118,23 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/white"
+            android:padding="@dimen/appbar_padding_top"
             android:background="@color/storybutton_background"
-            android:text="You need to finish 6 chapters more"/>
+            android:text="You need to finish 4 chapters more"/>
+
+        <ListView
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:id="@+id/ListChaptersBrowseStory"
+            android:layout_height="wrap_content" />
     </LinearLayout>
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:divider="@drawable/divider"
         android:dividerPadding="@dimen/appbar_padding_top"
         android:showDividers="middle"
@@ -174,7 +211,6 @@
             </LinearLayout>
 
         </LinearLayout>
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -320,18 +356,19 @@
                 app:layout_constraintEnd_toEndOf="parent" />
 
         </android.support.constraint.ConstraintLayout>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:layout_margin="@dimen/appbar_padding_top"
+            android:textColor="@color/white"
+            android:background="@color/d_grey"
+            android:text="Collect Rewards"
+            android:clickable="false"
+            app:layout_constraintTop_toBottomOf="@id/threeElementLayout" />
     </LinearLayout>
+    </ScrollView>
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAllCaps="false"
-        android:layout_margin="@dimen/appbar_padding_top"
-        android:textColor="@color/white"
-        android:background="@color/d_grey"
-        android:text="Collect Rewards"
-        android:clickable="false"
-        app:layout_constraintTop_toBottomOf="@id/threeElementLayout" />
 
-    </LinearLayout>
-</ScrollView>
+
+</LinearLayout>

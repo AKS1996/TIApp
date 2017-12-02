@@ -1,0 +1,6 @@
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:drawableLeft="@drawable/ic_search_black_24dp"
+    android:padding="@dimen/appbar_padding_top"
+    android:textSize="16sp" />

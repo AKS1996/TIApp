@@ -27,7 +27,7 @@ internal class CustomCardAdapter(context: Context, layoutId: Int, list: List<Car
             view.CardInfo.text = (mObject.cardCount).toString() + " Cards"
 
             // TODO: Read images from SD Card and add to card view
-            when (Position + 1) {
+            when (mObject.id) {
                 1 -> view.image.setImageResource(R.drawable.story1)
                 2 -> view.image.setImageResource(R.drawable.story2)
                 3 -> view.image.setImageResource(R.drawable.story3)
